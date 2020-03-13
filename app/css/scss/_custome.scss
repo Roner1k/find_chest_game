@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+$text_color: #FFFFFF;
+$second_color: #235999;
+//$theme_green: #5EA233;
+//$theme_grafit: #B5B5B5;
+
+body {
+  background: #fff;
+  color: $text_color;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-smoothing: antialised;
+}
+
+div, p, input, button, form, a {
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, img, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active {
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+input[type="number"] {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-size: 4rem;
+  color: $text_color;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.6rem;
+  color: $text_color;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 1.2;
+  @media screen and (max-width: 767px) {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 2.1rem;
+  color: $text_color;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h4 {
+  font-size: 1.8rem;
+  color: $text_color;
+  text-align: center;
+  line-height: 1.31;
+  letter-spacing: 0;
+
+  span {
+    font-size: 1.6rem;
+  }
+}
+
+hr {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+

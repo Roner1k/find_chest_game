@@ -1,0 +1,136 @@
+@mixin under-number($inptext) {
+  content: $inptext;
+  @include ms_900(15px);
+  display: block;
+  color: #235999;
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+section#why {
+
+
+  @include desktop {
+    padding: 30px 19.55%;
+  }
+  @include nofhd {
+    padding: 30px 9%;
+  }
+  @include tablet {
+    padding: 30px 9% 10%;
+  }
+  @include laphone {
+    padding: 30px 9% 15%;
+
+  }
+
+
+  .why-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: center;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+
+    .why-main-text {
+      @include ms_900(112px);
+      color: #BFC2C4;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+
+      @include nofhd {
+        letter-spacing: 0.05em;
+        @include fontsize(5.5rem, 4rem, 3rem);
+      }
+
+
+    }
+
+    .why-text {
+      @include ms_900(16px);
+      color: #595D63;
+      position: relative;
+      margin-left: 5%;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 38px;
+        border: 3px solid #BFC2C4;
+      }
+    }
+  }
+
+  .reasons {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include tablet {
+      justify-content: space-around;
+    }
+
+    @include nedophone {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reasons-container {
+      width: 294px;
+
+      &:first-child .reasons-container__number:after {
+        @include under-number("окон");
+      }
+
+      &:nth-child(2) .reasons-container__number:after {
+        @include under-number("лет");
+      }
+
+      &:nth-child(2) .reasons-container__text {
+        padding-left: 35px;
+      }
+
+      &:nth-child(3) .reasons-container__number:after {
+        @include under-number("клиента");
+      }
+
+      .reasons-container__number {
+        display: inline-block;
+        height: 82px;
+        line-height: 82px;
+        float: left;
+        @include ms_900(55px);
+        @include fontsize(55px, 2rem, 2rem);
+        color: #235999;
+        position: relative;
+        @include laphone {
+          margin-left: 22px;
+        }
+      }
+
+      .reasons-container__text {
+        display: inline-block;
+        float: left;
+        width: 182px;
+        height: 82px;
+        padding: 20.5px 13px;
+        color: #323e44;
+        @include ms_300(15px);
+      }
+    }
+  }
+}

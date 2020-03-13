@@ -1,0 +1,69 @@
+@import "bower_components/bootstrap/scss/functions";
+@import "app/css/scss/variables";
+@import "bower_components/bootstrap/scss/variables";
+@import "bower_components/bootstrap/scss/mixins";
+@import "bower_components/bootstrap/scss/root";
+@import "bower_components/bootstrap/scss/reboot";
+@import "bower_components/bootstrap/scss/type";
+@import "bower_components/bootstrap/scss/images";
+@import "bower_components/bootstrap/scss/code";
+@import "bower_components/bootstrap/scss/grid";
+@import "bower_components/bootstrap/scss/tables";
+@import "bower_components/bootstrap/scss/forms";
+@import "bower_components/bootstrap/scss/buttons";
+@import "bower_components/bootstrap/scss/transitions";
+@import "bower_components/bootstrap/scss/dropdown";
+@import "bower_components/bootstrap/scss/button-group";
+@import "bower_components/bootstrap/scss/input-group";
+@import "bower_components/bootstrap/scss/custom-forms";
+@import "bower_components/bootstrap/scss/nav";
+@import "bower_components/bootstrap/scss/navbar";
+@import "bower_components/bootstrap/scss/card";
+@import "bower_components/bootstrap/scss/breadcrumb";
+@import "bower_components/bootstrap/scss/pagination";
+@import "bower_components/bootstrap/scss/badge";
+@import "bower_components/bootstrap/scss/jumbotron";
+@import "bower_components/bootstrap/scss/alert";
+@import "bower_components/bootstrap/scss/progress";
+@import "bower_components/bootstrap/scss/media";
+@import "bower_components/bootstrap/scss/list-group";
+@import "bower_components/bootstrap/scss/close";
+@import "bower_components/bootstrap/scss/modal";
+@import "bower_components/bootstrap/scss/tooltip";
+@import "bower_components/bootstrap/scss/popover";
+@import "bower_components/bootstrap/scss/carousel";
+@import "bower_components/bootstrap/scss/utilities";
+@import "bower_components/bootstrap/scss/print";
+@import "bower_components/bootstrap/scss/functions";
+@import "bower_components/bootstrap/scss/spinners";
+@import "bower_components/bootstrap/scss/toasts";
+
+
+@import 'app/css/scss/variables_fontawesome';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/fa-brands';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/fa-light';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/fa-regular';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/fa-solid';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/mixins';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/core';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/larger';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/fixed-width';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/list';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/bordered-pulled';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/animated';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/rotated-flipped';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/stacked';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/icons';
+@import 'bower_components/font-awesome/advanced-options/use-with-node-js/fontawesome-pro-webfonts/scss/screen-reader';
+
+@import "app/css/scss/variables_slick";
+@import "bower_components/slick-carousel/slick/slick-theme.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+
+@import "bower_components/magnific-popup/src/css/_settings.scss";
+@import "bower_components/magnific-popup/src/css/main.scss";
+
+
+
+@import "bower_components/css-hamburgers/_sass/hamburgers/hamburgers";
+@import "bower_components/css-hamburgers/_sass/hamburgers/base";

@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "description": "project",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "css-hamburgers": "0.8.1",
+    "slick-carousel": "latest",
+    "bootstrap": "latest",
+    "animate.css": "^3.7.2",
+    "font-awesome": "^5.12.1"
+  },
+  "devDependencies": {
+    "magnific-popup": "^1.1.0",
+    "jquery-validation": "^1.19.1",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}

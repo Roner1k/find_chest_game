@@ -1,0 +1,82 @@
+$phone-width: 480px;
+$nedophone-width: 575px;
+$tablet-width: 768px;
+$desktop-width: 980px;
+$biggerdesktop-width: 1240px;
+$nofhd: 1601px;
+
+@mixin nofhd {
+  @media (max-width: #{$nofhd}) {
+    @content;
+  }
+}
+
+@mixin biggerdesktop {
+  @media (min-width: #{$biggerdesktop-width + 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width + 1}) {
+    @content;
+  }
+}
+
+@mixin laphone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin nedophone {
+  @media (max-width: #{$nedophone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+  @mixin retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+
+  @mixin print {
+    @media print {
+      @content;
+    }
+  }
+
+  @mixin fontsize($desktop, $tablet, $phone) {
+    font-size: $desktop !important;
+
+    @include tablet {
+      font-size: $tablet !important;
+    }
+    @include phone {
+      font-size: $phone !important;
+    }
+  }
+//
+//@import "referral";
+//@import "events";
+//@import "page-case-studies";
+//@import "hipaa_security";
+//@import "carrers";
