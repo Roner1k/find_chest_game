@@ -98,20 +98,24 @@ section#mainpage-content {
         h2 {
           font-size: 2rem;
         }
-        table{
+
+        table {
           font-size: .9rem;
-          tr{
-            & td:first-child{
+
+          tr {
+            & td:first-child {
               width: 90px;
               color: #C3C8D8;
             }
-            & td:last-child{
+
+            & td:last-child {
               color: #117AC0;
 
             }
           }
         }
-        .counts-row{
+
+        .counts-row {
           display: flex;
           flex-flow: row wrap;
           justify-content: space-around;
@@ -119,13 +123,15 @@ section#mainpage-content {
           text-align: center;
         }
       }
-      .my-wall-item{
-        .my-wall-user{
+
+      .my-wall-item {
+        .my-wall-user {
           padding: 10px;
           display: flex;
           flex-flow: row nowrap;
-          .my-wall-user__name{
-            span{
+
+          .my-wall-user__name {
+            span {
               display: block;
               font-size: .8rem;
               color: gray;
@@ -133,13 +139,17 @@ section#mainpage-content {
           }
 
         }
-        .wall-text{
 
+        .wall-text {
+          color: red;
         }
-        .wall-actions{
+
+        .wall-actions {
           width: 100%;
           display: flex;
           flex-flow: row nowrap;
+          color: red;
+
         }
       }
     }
