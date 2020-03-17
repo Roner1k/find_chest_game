@@ -31,6 +31,13 @@ section#mainpage-content {
 
         .menu-text {
           padding: 12px 7px;
+
+          span.active{
+            padding: 5px 6px;
+            background-color: #0382C3;
+            border-radius: 4px;
+            color: whitesmoke;
+          }
         }
       }
     }
