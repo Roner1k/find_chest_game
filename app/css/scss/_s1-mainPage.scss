@@ -39,32 +39,30 @@ section#mainpage-content {
   //content
 
   .my-page {
-    border: 2px solid green;
+    //border: 2px solid green;
     display: flex;
 
     .profile-about {
       max-width: 300px;
+      margin-right: 2%;
       float: left;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
 
       .profile-about__preview {
-        box-shadow: 0 0 6px black;
+        box-shadow: 0 2px 6px #BDBDBD;
+        border-radius: 5px;
         min-height: 250px;
+        margin-bottom: 5%;
         padding: 10px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
 
-        img {
-
-        }
-
         .but-wrap {
           max-width: 200px;
-
 
           button {
             display: block;
@@ -74,82 +72,174 @@ section#mainpage-content {
             margin: 0 auto;
             background-color: #8BD8FB;
             color: $text_color2;
-
           }
         }
       }
 
       .profile-about__friends {
         width: 200px;
-        height: 300px;
-        border: 1px solid black;
+        padding: 15px 10px;
+        box-shadow: 0 2px 6px #BDBDBD;
+        border-radius: 5px;
+
+        h3 {
+          padding: 0 0 10px;
+          font-size: 1.2rem;
+          color: #C3C8D8 ;
+          text-align: left;
+        }
+        .grid-friends{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          gap: 1em;
+
+
+          .grid-friends__item{
+            width: 50px;
+            height: 80px;
+            margin: 0 auto;
+            transition: all .3s ease;
+
+            &:hover{
+              box-shadow: 0 1px 3px #BDBDBD ;
+              cursor: pointer;
+              transform: scale(1.1);
+              transition: all .3s ease;
+            }
+
+            .friend-name{
+              font-size: .8rem;
+              text-align: center;
+              line-height: 15px;
+            }
+
+          }
+        }
       }
     }
 
-
     .profile-content {
-
+      min-width: 550px;
       display: flex;
       flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: stretch;
 
       .profile-content__info {
-        box-shadow: 0 0 6px gray;
+        box-shadow: 0 2px 6px #BDBDBD;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 2%;
 
         h2 {
           font-size: 2rem;
+          padding: 20px 15px;
+          color: #8D8393;
         }
 
         table {
           font-size: .9rem;
+          padding-left: 5%;
+          padding-top: 3%;
+          padding-bottom: 3%;
+          display: block;
 
           tr {
+            display: block;
+            padding-bottom: 3%;
+
             & td:first-child {
-              width: 90px;
+              width: 50px;
+              display: inline-block;
+              padding-right: 120px;
               color: #C3C8D8;
+
             }
 
             & td:last-child {
+              display: inline-block;
               color: #117AC0;
-
             }
           }
         }
 
         .counts-row {
+          color: #0B83CF;
+          border-top: 1px solid #eaeaea;
+          padding: 15px 0;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-around;
           align-items: center;
           text-align: center;
+
+          .count-item {
+            .count-item__number {
+              font-size: 1.5rem;
+            }
+
+            .count-item__name {
+              font-size: 1.2rem;
+            }
+          }
         }
       }
 
       .my-wall-item {
+        box-shadow: 0 2px 6px #BDBDBD;
+        border-radius: 5px;
+        padding: 0 10px;
+        margin-bottom: 2%;
+
         .my-wall-user {
-          padding: 10px;
+          padding: 15px 10px;
           display: flex;
           flex-flow: row nowrap;
 
           .my-wall-user__name {
+            padding-left: 10px;
+
             span {
               display: block;
               font-size: .8rem;
               color: gray;
             }
           }
-
         }
 
         .wall-text {
-          color: red;
+
         }
 
         .wall-actions {
           width: 100%;
           display: flex;
           flex-flow: row nowrap;
-          color: red;
+          color: #FFB34B;
+          padding: 20px 15px;
 
+          .likes, .comments, .repos {
+            padding: 0 25px;
+            position: relative;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            span {
+              left: -5px;
+              top: -3px;
+              font-size: 20px;
+              position: absolute;
+              transition: all .2s ease;
+            }
+
+            &:hover span {
+              transition: all .2s ease;
+              transform: scale(1.3);
+            }
+          }
         }
       }
     }
