@@ -1,5 +1,14 @@
 section#mainpage-content {
   padding-top: 15px;
+
+  #navigation {
+    li a[href="index.html"] {
+      background: #E4F6FE;
+      text-decoration: none;
+      border-radius: 2px;
+    }
+  }
+
 //navigation menu
   @import "_navigation.scss";
 
