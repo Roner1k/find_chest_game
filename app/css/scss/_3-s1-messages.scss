@@ -1,0 +1,101 @@
+section#messages-page {
+  padding-top: 15px;
+
+  //navigation menu
+  @import "_navigation.scss";
+
+  //content events
+
+  section#message-content {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .message-content__list {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      width: 260px;
+      height: 90vh;
+      box-shadow: 0 1px 6px #BDBDBD;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 9px;
+        background-color: #f2f8ff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #BDBDBD;
+        border-radius: 10px;
+      }
+
+      .message-content__list_item {
+        display: grid;
+        grid-template-columns: 60px 160px 40px;
+        grid-template-rows: 30px 60px;
+        padding: 3px 0;
+        font-size: 14px;
+        height: 100px;
+        border: 1px solid #dfdfdf;
+
+        &:hover{
+          background-color: #05A4E8;
+          color: whitesmoke ;
+          cursor: pointer;
+        }
+        &:hover .user-message-info{
+          color: whitesmoke;
+        }
+
+
+        .user-avatar {
+          text-align: center;
+          align-self: start;
+          grid-row-start: 1;
+          grid-row-end: 3;
+
+          img {
+            width: 40px;
+            height: 40px;
+            align-self: center;
+          }
+
+        }
+
+        .user-name {
+          font-size: 1rem;
+          font-weight: 700;
+          padding-top: 4px;
+          //letter-spacing: .05em;
+
+
+        }
+
+        .user-new-messages {
+          padding-top: 3px;
+          text-align: center;
+
+          span.active {
+            display: block;
+            color: whitesmoke;
+            border-radius: 6px;
+            background-color: #0382C3;
+            height: 22px;
+            width: 20px;
+          }
+
+        }
+
+        .user-message-info {
+          line-height: 1.1;
+          color:#0382C3 ;
+          font-weight: 600 ;
+          letter-spacing: .045em;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+}
