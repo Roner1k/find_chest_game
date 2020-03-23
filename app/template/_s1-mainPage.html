@@ -1,97 +1,23 @@
-<div class="container-md container-xl">
-<section id="mainpage-content">
-
+<div class="container-xl">
+    <section id="mainpage-content" class="pg1">
 
 
         @@include('_navigation.html')
 
         <article class="my-page">
 
-            <div class="profile-about">
-                <div class="profile-about__preview">
-                    <a href=""><img src="img/ico/av_256.png" alt="profile avatar" width="180" height="180"></a>
-                    <div class="but-wrap">
-                        <button type="button">EDIT</button>
-                    </div>
-                </div>
-                <div class="profile-about__friends">
-                    <h3>Friends(245):</h3>
 
-                    <div class="grid-friends">
-
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_1.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Hassan Tomlin</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_2.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Jemma Andrade</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_3.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Cerys Croft</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_4.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Ciara Ho</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_1.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Selina Coffey</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_3.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Bertha England</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_2.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Mindy Olson</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_1.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Tonisha Collier</div>
-                        </div>
-                        <div class="grid-friends__item">
-                            <img src="img/ico/avatar_4.png" width="50" height="50" alt="friend avatar">
-                            <div class="friend-name">Virgil Duran</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="profile-content">
 
                 <div class="profile-content__info">
-                    <h2>Luella Hubbard</h2>
-
-                    <table>
-                        <tr>
-                            <td>Birthday:</td>
-                            <td>August 13</td>
-                        </tr>
-                        <tr>
-                            <td>City:</td>
-                            <td>New Orleans</td>
-                        </tr>
-                    </table>
-
-                    <div class="counts-row">
-
-                        <div class="count-item">
-                            <div class="count-item__number">245</div>
-                            <div class="count-item__name">friends</div>
-                        </div>
-                        <div class="count-item">
-                            <div class="count-item__number">23</div>
-                            <div class="count-item__name">events</div>
-                        </div>
-                        <div class="count-item">
-                            <div class="count-item__number">456</div>
-                            <div class="count-item__name">media</div>
-                        </div>
-
+                    <div class="tasks">
+                        <label for="inputData">Введите число для действия(все четные)</label>
+                        <input type="number" placeholder="сюда" name="inputData" id="inputData">
+                        <button  onclick="myFunc1 (), this.disabled='true'">ДЕЛАЙ</button>
+                        <button onclick="window.location.href='index.html'" name="repeat">Поторить</button>                        <h4>Вывод:</h4>
+                        <div id="myOutData"></div>
                     </div>
-
                 </div>
 
                 <div class="my-wall-item">
@@ -108,13 +34,42 @@
                             </div>
                         </div>
 
-                        <div class="wall-text">Mauris in aliquet purus, sed interdum sapien‘ rusce fermentum justo a
-                            purus
-                            tempor ornare. Nulla convallis nibh sed dignissim imperdiet. Mauris nec urna
-                            idculis, moleslie Iotem a, venendlib mi. Donec vel viveud ex, el pellenlesque eml.
-                            Nun ut formnntum ni In voqtihulum nuguo ogot pros fnurihm, a posuere mt
-                            ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                            cubilia Curae.
+                        <div class="wall-text">
+ <pre>
+ Задание для самостоятельной работы
+ (в следующих задачах вывод данных может быть
+ реализован как с помощью диалоговых окон, так
+ и средствами консоли разработчика)<hr>
+ 1. Напишите скрипт, который запрашивает у пользователя число N
+     и выводит все четные числа от 2 до N
+ или N-1, если N нечетное. Например: ввод 10, вывод
+ 2 4 6 8 10; ввод 7, вывод 2 4 6.<hr>
+ 2. Напишите скрипт, который запрашивает у пользователя число N
+     и выводит все нечетные
+     числа от N (или
+ N-1, если N четное) до 1 в порядке убывания. Например, ввод 7,
+     вывод 7 5 3 1; ввод 10,
+     вывод 9 7 5 3 1.<hr>
+ 3. Напишите скрипт, который запрашивает у пользователя число N
+     и выводит все числа,
+     на которые делится
+ N, включая число 1 (примеры: ввод N=10, вывод 1, 2,
+ 5; ввод 11, вывод 1).<hr>
+ 4. Напишите скрипт, который принимает от пользователя величину
+     годовой депозитной
+     ставки (в процентах) и выводит количество лет, по прошествии
+ которых вклад увеличится вдвое.<hr>
+ 5. Напишите скрипт, который выводит ровно 10 случайных чисел из
+     диапазона 1–20,
+     кроме тех, которые
+ делятся на 4.<hr>
+ 6. Из-за утечки из бака охлаждения ежедневно вытекает
+ 10% налитой воды. При объеме воды менее 10 литров
+ возникает аварийная ситуация. Составьте программу, которая
+     запрашивает у пользователя первоначальный
+ объем воды и рассчитывает, на сколько дней
+ работы этого хватит.
+ </pre>
                         </div>
 
                         <div class="row">
@@ -161,5 +116,5 @@
         </article>
 
 
-</section>
+    </section>
 </div>

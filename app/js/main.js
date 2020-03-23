@@ -1,40 +1,100 @@
 'use strict'
 
-$(document).ready(function () {
+//1 четные
 
-    $('.events-wrap__item').hover(function () {
-            $('.event-detail-button', this).addClass('active');
-            $('.event-detail-button.active').fadeIn();
-        },
-        function () {
-            $('.event-detail-button.active').fadeOut();
-            $('.event-detail-button', this).removeClass('active');
-        });
+function myFunc1() {
+
+    let valueN = document.getElementById("inputData").value;
+    let outVal = document.getElementById("myOutData");
+    valueN = parseInt(valueN);
+
+    console.log(`где мое число  ${valueN}`);
+
+    for (let i = 2; i <= valueN; i++) {
+
+        if (i % 2 == 0) {
+            outVal.innerHTML += i + '<br>четное число<br><hr>';
+        }
+    }
+}
+
+//2 нечетные
+
+function myFunc2() {
+
+    let valueN = document.getElementById("inputData").value;
+    let outVal = document.getElementById("myOutData");
+    valueN = parseInt(valueN);
+
+    console.log(`где мое число  ${valueN}`);
+
+    for (let i = 1; i <= valueN; i++) {
+
+        if (i % 2 !== 0) {
+            outVal.innerHTML += i + '<br>нечетное число<br><hr>';
+            // document.write(`<h3> НЕ четные до числа N  ${i}  </h3>`);
+        }
+    }
+}
 
 
-    // let condition = 0;
-    // while (condition < 10) {
-    //     console.log(`<h3> делаем что-то + $(condition) раз`);
-    //     document.write(`<h3> делаем что-то + $(condition) раз`);
-    //     condition++;
+//3 деление
+function myFunc3() {
 
-    //     let condition = 0;
-    //     do {
-    //         console.log(`<h3> делаем что-то + $(condition) раз`);
-    //         document.write(`<h3> делаем что-то + $(condition) раз`);
-    //         condition++;
-    //     }
-    // }
-    // while (condition < 10) ;
+    let valueN = document.getElementById("inputData").value;
+    let outVal = document.getElementById("myOutData");
+    valueN = parseInt(valueN);
 
+    console.log(`где мое число  ${valueN}`);
 
-    // let valueN = prompt("Введите СТОП-число. От 2 и больше (Четное)", 0);
-    // valueN = parseInt(valueN);
-    // for (let i = 2; i <= valueN; i++) {
-    //     if (i % 2 == 0) {
-    //         document.write(`<h3> Чет  ${i} раз </h3>`);
-    //     }
-    // }
+    for (let i = 1; i <= valueN; i++) {
 
+        if (valueN % i == 0) {
+            outVal.innerHTML += i + '<br>делится на ваше число<br><hr>';
+        }
+    }
+}
 
-});
+//4 депозит
+function myFunc4() {
+
+    let valueN = document.getElementById("inputData").value;
+    let outVal = document.getElementById("myOutData");
+    valueN = parseInt(valueN);
+
+    console.log(`где мое число  ${valueN}`);
+
+    let q;
+    q = 100 / valueN;
+
+    let w = 0;
+
+    for (let i = 0; i < q; i++) {
+        w++;
+    }
+    outVal.innerHTML += 'С ' + valueN + '%-й ставкой,<br> вклад удвоится через ' + w + ' лет(год)<hr>';
+}
+
+//Задание 5.
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //Включаючи мінімум та максимум
+}
+
+function myFunc5() {
+    let outVal = document.getElementById("myOutData");
+    let counter = 0;
+    let randomNumber = 0;
+
+    while (counter <= 9) {
+        randomNumber = getRandomIntInclusive(10, 20);
+
+        if (randomNumber % 4 !== 0) {
+            counter++;
+            outVal.innerHTML += counter + '-e cлучайное число ( '+ randomNumber +' ) <br> от 10 до 20, которое не делится на 4 <hr>';
+
+        }
+    }
+}
