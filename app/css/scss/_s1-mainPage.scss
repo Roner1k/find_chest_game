@@ -51,7 +51,7 @@ section#mainpage-content {
           button[onclick="myFunc2 (), this.disabled='true'"],
           button[onclick="myFunc3 (), this.disabled='true'"],
           button[onclick="myFunc4 (), this.disabled='true'"],
-          button[onclick="myFunc5 (), this.disabled='true'"],
+          button[onclick="myFunc5 ()"],
           button[onclick="myFunc6 (), this.disabled='true'"] {
             width: 150px;
             height: 60px;

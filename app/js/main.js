@@ -32,7 +32,6 @@ function myFunc2() {
 
         if (i % 2 !== 0) {
             outVal.innerHTML += i + '<br>нечетное число<br><hr>';
-            // document.write(`<h3> НЕ четные до числа N  ${i}  </h3>`);
         }
     }
 }
@@ -93,8 +92,25 @@ function myFunc5() {
 
         if (randomNumber % 4 !== 0) {
             counter++;
-            outVal.innerHTML += counter + '-e cлучайное число ( '+ randomNumber +' ) <br> от 10 до 20, которое не делится на 4 <hr>';
+            outVal.innerHTML += counter + '-e cлучайное число ( ' + randomNumber + ' ) <br> от 10 до 20, которое не делится на 4 <hr>';
 
         }
     }
+}
+
+//6 вода
+
+function myFunc6() {
+
+    let valueN = document.getElementById("inputData").value;
+    let outVal = document.getElementById("myOutData");
+    valueN = parseInt(valueN);
+
+    let days = 0;
+    while (valueN > 10) {
+        days++;
+        valueN -= valueN * 0.1; // 0.1 = 10%
+    }
+    outVal.innerHTML += 'На ' + days + ' дня<br>хватит воды<br><hr>';
+
 }
