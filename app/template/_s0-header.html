@@ -1,13 +1,75 @@
-<header id="header">
-    <div class="header-top">
+<div id="test-page">
+    <div class="container">
+        <h1>Тест просто!</h1>
+        <div class="questions">
+            <h3>Где Вы были вчера вечером?</h3>
 
-        <h1 class="header-top__name"><a href="">sn</a></h1>
-        <div class="header-top__user">
-            <a href=""><img class="user-avatar" src="img/ico/av_64.png" alt="profile avatar small"></a>
-            <a href="">
-                <div class="username">Luella Hubbard</div>
-            </a>
+            <div class="row">
+                <input type="radio" id="que1-s1" name="que1" value="0">
+                <label for="que1-s1">На работе</label>
+            </div>
+            <div class="row">
+                <input type="radio" id="que1-s2" name="que1" value="0">
+                <label for="que1-s2">На заправке</label>
+            </div>
+            <div class="row">
+                <input type="radio" id="que1-s3" name="que1" value="2">
+                <label for="que1-s3">Дома</label>
+            </div>
+            <label class="d-none"></label>
+            <input type="radio" class="d-none" name="que1" value="1" checked>
+        </div>
+
+        <div class="questions">
+            <h3> Земля плоская?</h3>
+
+            <div class="row">
+                <input type="radio" id="que2-s1" name="que2" value="0">
+                <label for="que2-s1">Да!</label>
+            </div>
+            <div class="row">
+                <input type="radio" id="que2-s2" name="que2" value="2">
+                <label for="que2-s2">Нет!</label>
+            </div>
+            <div class="row">
+                <input type="radio" id="que2-s3" name="que2" value="0">
+                <label for="que2-s3">Квадратная!</label>
+            </div>
+            <label class="d-none"></label>
+            <input type="radio" class="d-none" name="que2" value="1" checked>
+        </div>
+
+        <div class="questions">
+            <h3> "2"+ 2 = ?</h3>
+
+            <div class="row">
+                <input type="radio" id="que3-s1" name="que3" value="0">
+                <label for="que3-s1">4</label>
+            </div>
+            <div class="row">
+                <input type="radio" id="que3-s2" name="que3" value="0">
+                <label for="que3-s2">"2"2</label>
+            </div>
+            <div class="row">
+                <input type="radio" id="que3-s3" name="que3" value="2">
+                <label for="que3-s3">22</label>
+            </div>
+            <label class="d-none"></label>
+            <input type="radio" class="d-none" name="que3" value="1" checked>
+        </div>
+        <button class="do-something" id="open-door" onclick="Ninth()">Результат!</button>
+        <a href="index.html">Окончить тест</a>
+
+    </div>
+    <div id="two">
+        <div class="modal-wrap">
+            <div class="modal-hello">
+                <h3>Результат теста</h3>
+
+                <input disabled id="result-ninth" type="text">
+
+                <button class="close-me">Ок!</button>
+            </div>
         </div>
     </div>
-
-</header>
+</div>

@@ -1,230 +1,92 @@
+h3 {
+  border: #0f6674 3px solid;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 50px;
+  margin: 10px auto 5px;
 
-section#mainpage-content {
-  padding-top: 15px;
-  overflow-x: auto;
+}
 
+label {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 19px;
+  font-weight: 700;
+}
 
+input {
 
-  //navigation menu
-  @import "_navigation.scss";
+  width: 315px;
+  height: 33px;
+  border: #0b2e13 1px solid;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 
-  //content
+input[disabled] {
+  padding: 15px;
+  height: auto;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  transition: all .3s ease-in-out;
+}
 
-  .my-page {
-    overflow-x: scroll;
+button {
+  width: 111px;
+  height: 35px;
+  margin: 0 auto 15px;
+  display: block;
+}
 
-    .profile-content {
-      min-width: 550px;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: flex-start;
-      justify-content: stretch;
+select {
+  width: 80px;
+  margin-left: 10px;
+}
 
-      .profile-content__info {
-        box-shadow: 0 2px 6px #BDBDBD;
-        border-radius: 5px;
-        width: 100%;
-        padding: 40px 15px;
+.dollarV {
+  padding-top: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 
-        .tasks {
-
-          label {
-            display: block;
-            margin: 0 auto;
-            width: 200px;
-            text-align: center;
-            font-size: 20px;
-            font-weight: 700;
-          }
-
-          #inputData {
-            width: 300px;
-            margin: 20px auto;
-            display: block;
-            text-align: center;
-            border: 1px solid grey;
-
-          }
-
-
-          button[onclick="myFunc1 (), this.disabled='true'"],
-          button[onclick="myFunc2 (), this.disabled='true'"],
-          button[onclick="myFunc3 (), this.disabled='true'"],
-          button[onclick="myFunc4 (), this.disabled='true'"],
-          button[onclick="myFunc5 ()"],
-          button[onclick="myFunc6 (), this.disabled='true'"] {
-            width: 150px;
-            height: 60px;
-            margin: 0 auto;
-            display: block;
-            background-color: #0c5460;
-            color: whitesmoke;
-            font-size: 19px;
-            letter-spacing: .05em;
-          }
-
-          button[disabled] {
-            background-color: grey;
-            color: #cbcbcb;
-          }
-
-          button[name='repeat'] {
-            display: block;
-            background-color: #00aa88;
-            color: whitesmoke;
-            margin: 15px auto;
-            width: 80px;
-            height: 30px;
-          }
-
-          h4 {
-            margin: 20px 0;
-          }
-
-          #myOutData {
-            display: block;
-            overflow-y: scroll;
-            padding: 15px;
-            width: 300px;
-            height: 350px;
-            box-shadow: 0 0 6px gray;
-            margin: 10px auto;
-            text-align: center;
-            font-weight: 600;
-
-            &::-webkit-scrollbar {
-              width: 5px;
-              height: 9px;
-              background-color: #f2f8ff;
-            }
-
-            &::-webkit-scrollbar-thumb {
-              background: #BDBDBD;
-              border-radius: 10px;
-            }
-          }
-        }
-      }
-
-      .my-wall-item {
-        box-shadow: 0 2px 6px #BDBDBD;
-        border-radius: 5px;
-        padding: 0 10px;
-        margin-bottom: 2%;
-        width: 100%;
-
-
-        .my-wall-user {
-          padding: 15px 10px;
-          display: flex;
-          flex-flow: row nowrap;
-
-          .my-wall-user__name {
-            padding-left: 10px;
-
-            span {
-              display: block;
-              font-size: .8rem;
-              color: gray;
-            }
-          }
-        }
-
-        .wall-text {
-
-          pre {
-            overflow: visible;
-            font-weight: 700;
-            font-size: 17px;
-          }
-
-        }
-
-        .wall-actions {
-          width: 100%;
-          display: flex;
-          flex-flow: row nowrap;
-          color: #FFB34B;
-          padding: 20px 15px;
-
-          .likes, .comments, .repos {
-            padding: 0 25px;
-            position: relative;
-
-            &:hover {
-              cursor: pointer;
-            }
-
-            span {
-              left: -5px;
-              top: -3px;
-              font-size: 20px;
-              position: absolute;
-              transition: all .2s ease;
-            }
-
-            &:hover span {
-              transition: all .2s ease;
-              transform: scale(1.3);
-            }
-          }
-        }
-      }
-    }
+  span {
+    font-weight: 700;
+    font-size: 18px;
   }
 }
-.pg1{
-  #navigation {
-    li a[href="index.html"] {
-      background: #E4F6FE;
-      text-decoration: none;
-      border-radius: 2px;
-    }
 
-  }
+a[href='test.html'], a[href='index.html'] {
+  display: block;
+  margin: 20px auto;
+  width: 140px;
+  height: 35px;
+  background-color: #0b58a2;
+  color: #b3faff;
+  text-shadow: 0 1px 2px whitesmoke;
+  line-height: 35px;
+  text-align: center;
+
 }
-.pg2 {
-  #navigation {
-    li a[href="index2.html"] {
-      background: #E4F6FE;
-      text-decoration: none;
-      border-radius: 2px;
-    }
-  }
+
+.do-something {
+  background-color: #0b58a2;
+  color: #b3faff;
+  text-shadow: 0 1px 2px whitesmoke;
 }
-.pg3 {
-  #navigation {
-    li a[href="index3.html"] {
-      background: #E4F6FE;
-      text-decoration: none;
-      border-radius: 2px;
-    }
+.tenth{
+  input{
+    width: 111px;
   }
-}
-.pg4 {
-  #navigation {
-    li a[href="index4.html"] {
-      background: #E4F6FE;
-      text-decoration: none;
-      border-radius: 2px;
-    }
-  }
-}
-.pg5 {
-  #navigation {
-    li a[href="index5.html"] {
-      background: #E4F6FE;
-      text-decoration: none;
-      border-radius: 2px;
-    }
-  }
-}
-.pg6 {
-  #navigation {
-    li a[href="index6.html"] {
-      background: #E4F6FE;
-      text-decoration: none;
-      border-radius: 2px;
-    }
+  input[disabled]{
+    width: 320px;
+    font-size: 15px;
   }
 }

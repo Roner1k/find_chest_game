@@ -1,117 +1,120 @@
-<div class="container-xl">
-    <section id="mainpage-content" class="pg1">
+<div class="first">
+    <h3>1</h3>
+    <label for="user-age">Сколько Вам лет? (0-120):</label>
+    <input type="number" id="user-age" placeholder="0-120">
+    <input disabled id="result-one" type="text">
+    <button class="do-something" onclick="First()">Жми!</button>
+    <hr>
+</div>
 
-        @@include('_navigation.html')
+<div class="second">
+    <h3>2</h3>
+    <label for="user-number">Введите число от 0-9:</label>
+    <input type="number" id="user-number" placeholder="0-9">
+    <input disabled id="result-two" type="text">
+    <button class="do-something" onclick="Second()">Жми!</button>
+    <hr>
+</div>
 
-        <article class="my-page">
+<div class="third">
+    <h3>3</h3>
+    <label for="three-digit-number">Введите трехзначное число:</label>
+    <input type="number" id="three-digit-number" placeholder="123">
+    <label for="check-number">Введите число для проверки:</label>
+    <input type="number" id="check-number" placeholder="1">
+    <input disabled id="result-three" type="text">
+    <button class="do-something" onclick="Third()">Жми!</button>
+    <hr>
+</div>
 
-            <div class="profile-content">
+<div class="fourth">
+    <h3>4</h3>
+    <label for="year-check">Проверка на высокосность! Введите год:</label>
+    <input type="number" id="year-check" placeholder="2007">
+    <input disabled id="result-four" type="text">
+    <button class="do-something" onclick="Fourth()">Жми!</button>
+    <hr>
+</div>
 
-                <div class="profile-content__info">
-                    <div class="tasks">
-                        <label for="inputData">Введите число для действия(все четные)</label>
-                        <input type="number" placeholder="сюда" name="inputData" id="inputData">
-                        <button  onclick="myFunc1 (), this.disabled='true'">ДЕЛАЙ</button>
-                        <button onclick="window.location.href='index.html'" name="repeat">Поторить</button>                        <h4>Вывод:</h4>
-                        <div id="myOutData"></div>
-                    </div>
-                </div>
+<div class="fifth">
+    <h3>5</h3>
+    <label for="poli-check">Тест на Полиндром, введите пятизначное число:</label>
+    <input type="number" id="poli-check" placeholder="12345">
+    <input disabled id="result-five" type="text">
+    <button class="do-something" onclick="Fifth()">Жми!</button>
+    <hr>
+</div>
 
-                <div class="my-wall-item">
+<div class="sixth">
+    <h3>6</h3>
+    <label for="USD">Конвертер Валют: </label>
+    <input type="number" id="USD" placeholder="$, USD, доллары">
+    <div class="dollarV">
+        <span> USD ==> </span>
+        <select name="converter" id="select-currency">
+            <option id="EUR" data-currencyName='EUR' value="0.93">EUR</option>
+            <option id="UAH" data-currencyName='UAH' value="27.24">UAH</option>
+            <option id="AZN" data-currencyName='AZN' value="1.69">AZN</option>
+        </select>
+    </div>
 
-                    <div class="container">
-                        <div class="row">
+    <input disabled id="result-six" type="text">
+    <button class="do-something" onclick="Sixth()">Жми!</button>
+    <hr>
+</div>
+<div class="seventh">
+    <h3>7</h3>
+    <label for="buy-sum">Сума покупки: (скидка: от 200 до 300 – скидка 3%, от 300
+        до 500 – 5%, от 500 и выше – 7%.)</label>
+    <input type="number" id="buy-sum" placeholder="100">
+    <input disabled id="result-seven" type="text">
+    <button class="do-something" onclick="Seventh()">Жми!</button>
+    <hr>
+</div>
 
-                            <div class="my-wall-user">
-                                <img src="img/ico/av_64.png" alt="user avatar  mini" width="40" height="40">
-                                <div class="my-wall-user__name">
-                                    Luella Hubbard
-                                    <span>1 Apr 2018</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="eighth">
+    <h3>8</h3>
+    <label for="circle-length">Введите Длинну Окружности:</label>
+    <input type="number" id="circle-length" placeholder="123">
+    <label for="square-p">Введите Периметр Квадрата:</label>
+    <input type="number" id="square-p" placeholder="321">
+    <input disabled id="result-eighth" type="text">
+    <button class="do-something" onclick="Eighth()">Жми!</button>
+    <hr>
+</div>
 
-                        <div class="wall-text">
- <pre>
- Задание для самостоятельной работы
- (в следующих задачах вывод данных может быть
- реализован как с помощью диалоговых окон, так
- и средствами консоли разработчика)<hr>
- 1. Напишите скрипт, который запрашивает у пользователя число N
-     и выводит все четные числа от 2 до N
- или N-1, если N нечетное. Например: ввод 10, вывод
- 2 4 6 8 10; ввод 7, вывод 2 4 6.<hr>
- 2. Напишите скрипт, который запрашивает у пользователя число N
-     и выводит все нечетные
-     числа от N (или
- N-1, если N четное) до 1 в порядке убывания. Например, ввод 7,
-     вывод 7 5 3 1; ввод 10,
-     вывод 9 7 5 3 1.<hr>
- 3. Напишите скрипт, который запрашивает у пользователя число N
-     и выводит все числа,
-     на которые делится
- N, включая число 1 (примеры: ввод N=10, вывод 1, 2,
- 5; ввод 11, вывод 1).<hr>
- 4. Напишите скрипт, который принимает от пользователя величину
-     годовой депозитной
-     ставки (в процентах) и выводит количество лет, по прошествии
- которых вклад увеличится вдвое.<hr>
- 5. Напишите скрипт, который выводит ровно 10 случайных чисел из
-     диапазона 1–20,
-     кроме тех, которые
- делятся на 4.<hr>
- 6. Из-за утечки из бака охлаждения ежедневно вытекает
- 10% налитой воды. При объеме воды менее 10 литров
- возникает аварийная ситуация. Составьте программу, которая
-     запрашивает у пользователя первоначальный
- объем воды и рассчитывает, на сколько дней
- работы этого хватит.
- </pre>
-                        </div>
+<div class="ninth">
+    <h3>9</h3>
+    <h4>Пройдите тест по ссылке снизу</h4>
+    <a href="test.html">ТЕСТ ТУТ!</a>
+    <hr>
+</div>
 
-                        <div class="row">
-                            <div class="wall-actions">
-                                <div class="likes"><span><i class="fas fa-heart"></i></span>342</div>
-                                <div class="comments"><span><i class="far fa-comment-alt"></i></span>249</div>
-                                <div class="repos"><span><i class="fas fa-share"></i></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="tenth">
+    <h3>10</h3>
 
-                <div class="my-wall-item">
+    <label>Введите дату, <br> к которой правильно прибавится один день</label>
 
-                    <div class="container">
-                        <div class="row">
+    <div class="row justify-content-center">
 
-                            <div class="my-wall-user">
-                                <img src="img/ico/av_64.png" alt="user avatar  mini" width="40" height="40">
-                                <div class="my-wall-user__name">
-                                    Luella Hubbard
-                                    <span>25 March 2018</span>
-                                </div>
-                            </div>
-                        </div>
+        <div class="col-md-auto">
+            <label for="date-value">Число:</label>
+            <input type="number" id="date-value" placeholder="день">
+        </div>
 
-                        <div class="wall-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda
-                            atque consequatur consequuntur debitis ducimus eius exercitationem facere, facilis harum hic
-                            iure iusto laudantium minima mollitia nam neque obcaecati praesentium provident quidem quo
-                            rem velit, voluptatibus! Deleniti dolorum est excepturi expedita molestiae quae rem vitae.
-                            Ad dolores mollitia neque ratione?
-                        </div>
+        <div class="col-md-auto">
+            <label for="month-value">Месяц:</label>
+            <input type="number" id="month-value" placeholder="месяц">
+        </div>
 
-                        <div class="row">
-                            <div class="wall-actions">
-                                <div class="likes"><span><i class="fas fa-heart"></i></span>398</div>
-                                <div class="comments"><span><i class="far fa-comment-alt"></i></span>78</div>
-                                <div class="repos"><span><i class="fas fa-share"></i></span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
+        <div class="col-md-auto">
+            <label for="year-value">Год:</label>
+            <input type="number" id="year-value" placeholder="год">
+        </div>
 
+    </div>
 
-    </section>
+    <input disabled id="result-tenth" type="text">
+    <button class="do-something" onclick="Tenth()">Жми!</button>
+    <hr>
 </div>

@@ -18,13 +18,14 @@ $blue-text: #0382C3;
 //$theme_grafit: #B5B5B5;
 
 body {
+  height: 3200px;
   background: #fff;
   color: $text_color;
   font-family:  Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   font-smoothing: antialised;
 }
 
@@ -57,11 +58,11 @@ input[type="number"] {
   }
 }
 
-ul, li {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
+//ul, li {
+//  display: block;
+//  padding: 0;
+//  margin: 0;
+//}
 
 button {
   border: none;
