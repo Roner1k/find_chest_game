@@ -1,4 +1,5 @@
 #test-page {
+  position: relative;
   h1 {
     text-align: center;
     color: black;
@@ -30,13 +31,7 @@
   }
 
   #two {
-    button[type="button"] {
-      display: block;
-      margin: 0 auto;
-      width: 180px;
-      height: 33px;
-      border: darkslategrey 1px solid;
-    }
+
 
     .modal-wrap {
       display: none;
