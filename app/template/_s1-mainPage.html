@@ -1,7 +1,7 @@
 <div class="first">
     <h3>1</h3>
-    <label for="user-age">Сколько Вам лет? (0-120):</label>
-    <input type="number" id="user-age" placeholder="0-120">
+    <label for="test-number">Введите число:</label>
+    <input type="number" id="test-number" placeholder="123">
     <input disabled id="result-one" type="text">
     <button class="do-something" onclick="First()">Жми!</button>
     <hr>
@@ -9,8 +9,8 @@
 
 <div class="second">
     <h3>2</h3>
-    <label for="user-number">Введите число от 0-9:</label>
-    <input type="number" id="user-number" placeholder="0-9">
+    <label for="user-age">Введите свой возраст:</label>
+    <input type="number" id="user-age" placeholder="0-120">
     <input disabled id="result-two" type="text">
     <button class="do-something" onclick="Second()">Жми!</button>
     <hr>
@@ -18,10 +18,8 @@
 
 <div class="third">
     <h3>3</h3>
-    <label for="three-digit-number">Введите трехзначное число:</label>
-    <input type="number" id="three-digit-number" placeholder="123">
-    <label for="check-number">Введите число для проверки:</label>
-    <input type="number" id="check-number" placeholder="1">
+    <label for="module-value">Модуль числа:</label>
+    <input type="number" id="module-value" placeholder="123">
     <input disabled id="result-three" type="text">
     <button class="do-something" onclick="Third()">Жми!</button>
     <hr>
@@ -29,8 +27,27 @@
 
 <div class="fourth">
     <h3>4</h3>
-    <label for="year-check">Проверка на высокосность! Введите год:</label>
-    <input type="number" id="year-check" placeholder="2007">
+    <label>Введите время, и мы его проверим:</label>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-auto">
+            <label for="hour-value">Часов:</label>
+            <input type="number" id="hour-value" placeholder="часы">
+        </div>
+
+        <div class="col-md-auto">
+            <label for="min-value">Минут:</label>
+            <input type="number" id="min-value" placeholder="минуты">
+        </div>
+
+        <div class="col-md-auto">
+            <label for="sec-value">Секунд:</label>
+            <input type="number" id="sec-value" placeholder="секунды">
+        </div>
+
+    </div>
+
     <input disabled id="result-four" type="text">
     <button class="do-something" onclick="Fourth()">Жми!</button>
     <hr>
@@ -38,8 +55,17 @@
 
 <div class="fifth">
     <h3>5</h3>
-    <label for="poli-check">Тест на Полиндром, введите пятизначное число:</label>
-    <input type="number" id="poli-check" placeholder="12345">
+    <div class="row justify-content-center align-items-center">
+        <label>Определение номера четверти <br> в которую попадет точка</label>
+
+        <label for="x-value">x =</label>
+        <input type="number" id="x-value" placeholder="x">
+
+        <label for="y-value">y =</label>
+        <input type="number" id="y-value" placeholder="y">
+
+    </div>
+
     <input disabled id="result-five" type="text">
     <button class="do-something" onclick="Fifth()">Жми!</button>
     <hr>
@@ -47,16 +73,8 @@
 
 <div class="sixth">
     <h3>6</h3>
-    <label for="USD">Конвертер Валют: </label>
-    <input type="number" id="USD" placeholder="$, USD, доллары">
-    <div class="dollarV">
-        <span> USD ==> </span>
-        <select name="converter" id="select-currency">
-            <option id="EUR" data-currencyName='EUR' value="0.93">EUR</option>
-            <option id="UAH" data-currencyName='UAH' value="27.24">UAH</option>
-            <option id="AZN" data-currencyName='AZN' value="1.69">AZN</option>
-        </select>
-    </div>
+    <label for="month">Номер месяца: </label>
+    <input type="number" id="month" placeholder="порядковый номер месяца">
 
     <input disabled id="result-six" type="text">
     <button class="do-something" onclick="Sixth()">Жми!</button>
@@ -64,9 +82,26 @@
 </div>
 <div class="seventh">
     <h3>7</h3>
-    <label for="buy-sum">Сума покупки: (скидка: от 200 до 300 – скидка 3%, от 300
-        до 500 – 5%, от 500 и выше – 7%.)</label>
-    <input type="number" id="buy-sum" placeholder="100">
+    <label>Калькулятор (beta):</label>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-auto">
+            <label class="d-none" for="first-value"></label>
+            <input type="number" id="first-value" placeholder="1234567">
+        </div>
+
+        <div class="col-md-auto">
+            <label class="d-none" for="act-value"></label>
+            <input type="text" id="act-value" maxlength="1" placeholder=" + - * / ">
+        </div>
+
+        <div class="col-md-auto">
+            <label class="d-none" for="second-value"></label>
+            <input type="number" id="second-value" max="8" placeholder="2345678">
+        </div>
+
+    </div>
     <input disabled id="result-seven" type="text">
     <button class="do-something" onclick="Seventh()">Жми!</button>
     <hr>
@@ -74,10 +109,11 @@
 
 <div class="eighth">
     <h3>8</h3>
-    <label for="circle-length">Введите Длинну Окружности:</label>
-    <input type="number" id="circle-length" placeholder="123">
-    <label for="square-p">Введите Периметр Квадрата:</label>
-    <input type="number" id="square-p" placeholder="321">
+    <label for="first-number">Сравниваем числа
+        <br> Первое число:</label>
+    <input type="number" id="first-number" placeholder="213">
+    <label for="second-number">Второе число:</label>
+    <input type="number" id="second-number" placeholder="123">
     <input disabled id="result-eighth" type="text">
     <button class="do-something" onclick="Eighth()">Жми!</button>
     <hr>
@@ -85,32 +121,18 @@
 
 <div class="ninth">
     <h3>9</h3>
-    <h4>Пройдите тест по ссылке снизу</h4>
-    <a href="test.html">ТЕСТ ТУТ!</a>
+    <label for="check-number">Число для проверки на кратность 5-ти: </label>
+    <input type="number" id="check-number" placeholder="sample number">
+
+    <input disabled id="result-ninth" type="text">
+    <button class="do-something" onclick="Ninth()">Жми!</button>
     <hr>
 </div>
 
 <div class="tenth">
     <h3>10</h3>
-
-    <label>Введите дату, <br> к которой правильно прибавится один день</label>
-
-    <div class="row justify-content-center">
-
-        <div class="col-md-auto">
-            <label for="date-value">Число:</label>
-            <input type="number" id="date-value" placeholder="день">
-        </div>
-
-        <div class="col-md-auto">
-            <label for="month-value">Месяц:</label>
-            <input type="number" id="month-value" placeholder="месяц">
-        </div>
-
-        <div class="col-md-auto">
-            <label for="year-value">Год:</label>
-            <input type="number" id="year-value" placeholder="год">
-        </div>
+            <label for="planet-name">Название планеты <br> на которой Вы находитесь:</label>
+            <input type="text" id="planet-name" placeholder="например: земля">
 
     </div>
 

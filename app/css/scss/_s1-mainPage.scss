@@ -81,12 +81,29 @@ a[href='test.html'], a[href='index.html'] {
   color: #b3faff;
   text-shadow: 0 1px 2px whitesmoke;
 }
-.tenth{
+.fourth,{
   input{
-    width: 111px;
+    width: 100px;
   }
   input[disabled]{
     width: 320px;
     font-size: 15px;
+  }
+}
+.fifth{
+  label[for="x-value"],label[for="y-value"],#x-value,#y-value{
+    width: 50px;
+    display: inline-block;
+    margin: 0;
+  }
+}
+.seventh{
+  #first-value,#second-value,#act-value{
+    width: 50px;
+    display:block;
+    margin: 0 auto;
+  }
+  #first-value,#second-value{
+    width: 80px;
   }
 }
