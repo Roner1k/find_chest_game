@@ -1,142 +1,62 @@
-<div class="first">
-    <h3>1</h3>
-    <label for="test-number">Введите число:</label>
-    <input type="number" id="test-number" placeholder="123">
-    <input disabled id="result-one" type="text">
-    <button class="do-something" onclick="First()">Жми!</button>
-    <hr>
-</div>
+<div class="container-xl">
+    <figure>
+        <img src="img/AE86.jpg" width="520" height="320" alt="AE86 photo">
+        <div class="photo-description">Toyota Sprinter Trueno AE86</div>
+        <input type="number" placeholder="how many kilometers?">
+        <button type="button" onclick="AverageSpeedCalc();">Time calculator</button>
 
-<div class="second">
-    <h3>2</h3>
-    <label for="user-age">Введите свой возраст:</label>
-    <input type="number" id="user-age" placeholder="0-120">
-    <input disabled id="result-two" type="text">
-    <button class="do-something" onclick="Second()">Жми!</button>
-    <hr>
-</div>
+        <button type="button" onclick="autoInfo();this.disabled = true;">Click 4 more info</button>
+    </figure>
 
-<div class="third">
-    <h3>3</h3>
-    <label for="module-value">Модуль числа:</label>
-    <input type="number" id="module-value" placeholder="123">
-    <input disabled id="result-three" type="text">
-    <button class="do-something" onclick="Third()">Жми!</button>
-    <hr>
-</div>
+    <div class="second-task">
+        <div class="row align-items-center justify-content-center">
 
-<div class="fourth">
-    <h3>4</h3>
-    <label>Введите время, и мы его проверим:</label>
+            <div class="col-auto">
+                <input type="number" id='f-n-top' placeholder="1">
+                <span></span>
+                <input type="number" id='f-n-bottom' placeholder="2">
+            </div>
 
-    <div class="row justify-content-center">
+            <div class="col-auto">
+                <input type="text" id="act-value" maxlength="1" placeholder="+ - * /">
+            </div>
 
-        <div class="col-md-auto">
-            <label for="hour-value">Часов:</label>
-            <input type="number" id="hour-value" placeholder="часы">
+            <div class="col-auto">
+                <input type="number" id='s-n-top' placeholder="2">
+                <span></span>
+                <input type="number" id='s-n-bottom' placeholder="3">
+            </div>
+
+            <div class="col-auto">
+                  <span id="result-int">
+                    </span>
+            </div>
+
+            <div class="col-auto">
+                <input type="text" id='res-top' placeholder="0" disabled>
+                <span class="last">
+                  </span>
+                <input type="text" id='res-bottom' placeholder="0" disabled>
+            </div>
+
         </div>
-
-        <div class="col-md-auto">
-            <label for="min-value">Минут:</label>
-            <input type="number" id="min-value" placeholder="минуты">
-        </div>
-
-        <div class="col-md-auto">
-            <label for="sec-value">Секунд:</label>
-            <input type="number" id="sec-value" placeholder="секунды">
-        </div>
-
+        <button type="button" onclick="secondFunction()">result!</button>
     </div>
 
-    <input disabled id="result-four" type="text">
-    <button class="do-something" onclick="Fourth()">Жми!</button>
-    <hr>
 </div>
 
-<div class="fifth">
-    <h3>5</h3>
-    <div class="row justify-content-center align-items-center">
-        <label>Определение номера четверти <br> в которую попадет точка</label>
+<div class="third-task">
 
-        <label for="x-value">x =</label>
-        <input type="number" id="x-value" placeholder="x">
-
-        <label for="y-value">y =</label>
-        <input type="number" id="y-value" placeholder="y">
-
+    <h3>Timer</h3>
+    <div id="clock"></div>
+    <div class="row justify-content-center align-content-center mt-4">
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" value="0">
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" value="30">
+        <label for="sec">Seconds:</label>
+        <input type="number" id="sec" value="0">
     </div>
+    <button class="add-time" type="button">Add input time</button>
 
-    <input disabled id="result-five" type="text">
-    <button class="do-something" onclick="Fifth()">Жми!</button>
-    <hr>
-</div>
-
-<div class="sixth">
-    <h3>6</h3>
-    <label for="month">Номер месяца: </label>
-    <input type="number" id="month" placeholder="порядковый номер месяца">
-
-    <input disabled id="result-six" type="text">
-    <button class="do-something" onclick="Sixth()">Жми!</button>
-    <hr>
-</div>
-<div class="seventh">
-    <h3>7</h3>
-    <label>Калькулятор (beta):</label>
-
-    <div class="row justify-content-center">
-
-        <div class="col-md-auto">
-            <label class="d-none" for="first-value"></label>
-            <input type="number" id="first-value" placeholder="1234567">
-        </div>
-
-        <div class="col-md-auto">
-            <label class="d-none" for="act-value"></label>
-            <input type="text" id="act-value" maxlength="1" placeholder=" + - * / ">
-        </div>
-
-        <div class="col-md-auto">
-            <label class="d-none" for="second-value"></label>
-            <input type="number" id="second-value" max="8" placeholder="2345678">
-        </div>
-
-    </div>
-    <input disabled id="result-seven" type="text">
-    <button class="do-something" onclick="Seventh()">Жми!</button>
-    <hr>
-</div>
-
-<div class="eighth">
-    <h3>8</h3>
-    <label for="first-number">Сравниваем числа
-        <br> Первое число:</label>
-    <input type="number" id="first-number" placeholder="213">
-    <label for="second-number">Второе число:</label>
-    <input type="number" id="second-number" placeholder="123">
-    <input disabled id="result-eighth" type="text">
-    <button class="do-something" onclick="Eighth()">Жми!</button>
-    <hr>
-</div>
-
-<div class="ninth">
-    <h3>9</h3>
-    <label for="check-number">Число для проверки на кратность 5-ти: </label>
-    <input type="number" id="check-number" placeholder="sample number">
-
-    <input disabled id="result-ninth" type="text">
-    <button class="do-something" onclick="Ninth()">Жми!</button>
-    <hr>
-</div>
-
-<div class="tenth">
-    <h3>10</h3>
-            <label for="planet-name">Название планеты <br> на которой Вы находитесь:</label>
-            <input type="text" id="planet-name" placeholder="например: земля">
-
-    </div>
-
-    <input disabled id="result-tenth" type="text">
-    <button class="do-something" onclick="Tenth()">Жми!</button>
-    <hr>
 </div>

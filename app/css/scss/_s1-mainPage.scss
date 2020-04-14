@@ -1,109 +1,159 @@
-h3 {
-  border: #0f6674 3px solid;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  line-height: 50px;
-  margin: 10px auto 5px;
-
-}
-
-label {
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-input {
-
-  width: 315px;
-  height: 33px;
-  border: #0b2e13 1px solid;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-}
-
-input[disabled] {
+figure {
   padding: 15px;
-  height: auto;
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  color: black;
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  transition: all .3s ease-in-out;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .photo-description {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  button[type=button] {
+    width: 133px;
+    padding: 5px;
+    display: block;
+    background-color: #0b93d5;
+    margin: 10px auto;
+    color: whitesmoke;
+    box-shadow: black 0 0 4px;
+
+  }
+
+  input {
+    display: block;
+    width: 222px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: dimgrey 1px solid;
+  }
 }
 
-button {
-  width: 111px;
-  height: 35px;
-  margin: 0 auto 15px;
-  display: block;
-}
+.second-task {
+  margin-top: 30px;
 
-select {
-  width: 80px;
-  margin-left: 10px;
-}
-
-.dollarV {
-  padding-top: 10px;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
+  button[onclick="secondFunction()"] {
+    width: 133px;
+    padding: 5px;
+    display: block;
+    background-color: #0b93d5;
+    margin: 20px auto;
+    color: whitesmoke;
+    box-shadow: black 0 0 4px;
+  }
 
   span {
+    display: block;
+    width: 30px;
+    border: black 1px solid;
+    height: 1px;
+
+    &.last {
+      position: relative;
+      width: 55px;
+
+      &:before {
+        position: absolute;
+        right: 83px;
+        top: -11px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        color: black;
+        content: '=';
+      }
+    }
+  }
+
+  #result-int {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    display: block;
+    //background-color: whitesmoke;
+    position: absolute;
+    left: -5px;
+    top: -25px;
+    text-align: center;
+    border: none;
+  }
+
+  input {
+    display: block;
+    width: 30px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+    &[disabled] {
+      width: 55px;
+      background-color: #959595;
+      color: whitesmoke;
+
+      &::placeholder {
+        color: whitesmoke;
+      }
+    }
+  }
+
+  input[maxlength='1'] {
+    display: block;
+    width: 45px;
+    height: 20px;
+    font-size: 16px;
+    border: dimgrey 1px solid;
+    text-align: center;
+
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+.third-task {
+  padding-top: 20px;
+
+  h3 {
+    padding: 15px;
+  }
+
+  #clock {
+    text-align: center;
+    width: 333px;
+    height: 40px;
+    margin: 10px auto;
+    background-color: #e5e5e5;
+    color:#0b93d5 ;
+    text-shadow: 0 0 4px #95ced5;
     font-weight: 700;
     font-size: 18px;
+    line-height: 40px;
   }
-}
 
-a[href='test.html'], a[href='index.html'] {
-  display: block;
-  margin: 20px auto;
-  width: 140px;
-  height: 35px;
-  background-color: #0b58a2;
-  color: #b3faff;
-  text-shadow: 0 1px 2px whitesmoke;
-  line-height: 35px;
-  text-align: center;
+  label {
+    font-size: 18px;
+    margin: 0 10px;
+  }
 
-}
-
-.do-something {
-  background-color: #0b58a2;
-  color: #b3faff;
-  text-shadow: 0 1px 2px whitesmoke;
-}
-.fourth,{
-  input{
-    width: 100px;
+  input {
+    border:1px solid #4aaad2;
+    border-radius: 5px;
+    box-shadow: 0 0 4px  #4aaad2;
+    width: 40px;
+    text-align: center;
   }
-  input[disabled]{
-    width: 320px;
-    font-size: 15px;
-  }
-}
-.fifth{
-  label[for="x-value"],label[for="y-value"],#x-value,#y-value{
-    width: 50px;
-    display: inline-block;
-    margin: 0;
-  }
-}
-.seventh{
-  #first-value,#second-value,#act-value{
-    width: 50px;
-    display:block;
-    margin: 0 auto;
-  }
-  #first-value,#second-value{
-    width: 80px;
+  button{
+    width: 133px;
+    padding: 5px;
+    display: block;
+    background-color: #0b93d5;
+    margin: 20px auto;
+    color: whitesmoke;
+    box-shadow: black 0 0 4px;
   }
 }
