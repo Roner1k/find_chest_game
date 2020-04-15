@@ -1,4 +1,4 @@
-'use strict'
+//'use strict'
 let myCar = {};
 
 myCar = {
@@ -164,7 +164,6 @@ function secondFunction() {
 //3
 
 let currentTime = new Date,
-    timeStart,
     timeButton = document.querySelector('.add-time'),
     myTimeObj = {
         hours: 23,
@@ -172,7 +171,6 @@ let currentTime = new Date,
         seconds: 56,
     };
 
-timeStart = setInterval(tick, 1000);
 
 timeButton.onclick = function () {
     let addHour = +document.getElementById('hours').value,
@@ -180,14 +178,19 @@ timeButton.onclick = function () {
         addSecond = +document.getElementById('sec').value;
     if (addTime(myTimeObj.seconds, addSecond) > 59) {
         myTimeObj.seconds = (myTimeObj.seconds + addSecond) - 60;
-        let minuteCounter = myTimeObj.seconds;
-        for (let i = 0; minuteCounter > 0; minuteCounter -= 60) {
+        let minuteCounter = addSecond;
+        for (; minuteCounter > 0; minuteCounter -= 60) {
             myTimeObj.minutes++;
+            if (myTimeObj.minutes >= 60) {
+                myTimeObj.minutes = 0;
+                myTimeObj.hours++;
+                if (myTimeObj.hours >= 24) {
+                    myTimeObj.hours = 0;
+                }
+            }
         }
-
     } else {
         myTimeObj.seconds += addSecond;
-
     }
 }
 
@@ -202,8 +205,10 @@ function addTime(a, b) {
     return a + b;
 }
 
+setInterval(tick, 1000);
 
 function tick() {
+
     if (myTimeObj.seconds < 60) myTimeObj.seconds++;
     if (myTimeObj.seconds >= 60) {
         myTimeObj.seconds = 0;
@@ -211,7 +216,7 @@ function tick() {
         if (myTimeObj.minutes >= 60) {
             myTimeObj.minutes = 0;
             myTimeObj.hours++;
-            if(myTimeObj.hours >= 24){
+            if (myTimeObj.hours >= 24) {
                 myTimeObj.hours = 0;
             }
         }
