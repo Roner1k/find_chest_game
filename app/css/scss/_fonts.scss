@@ -1,72 +1,110 @@
 @font-face {
-  font-family: 'NeoSansPro-Light';
-  src: url('../fonts/neo_sans/NeoSansPro-Light.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Light.svg#NeoSansPro-Light') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Light.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Light.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Light.woff2') format('woff2');
+  font-family: 'WorkSans-Light';
+  src: url('../fonts/WorkSans/WorkSans-Light/WorkSans-Light.eot');
+  src: url('../fonts/WorkSans/WorkSans-Light/WorkSans-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WorkSans/WorkSans-Light/WorkSans-Light.svg#WorkSans-Light') format('svg'),
+  url('../fonts/WorkSans/WorkSans-Light/WorkSans-Light.ttf') format('truetype'),
+  url('../fonts/WorkSans/WorkSans-Light/WorkSans-Light.woff') format('woff'),
+  url('../fonts/WorkSans/WorkSans-Light/WorkSans-Light.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NeoSansPro-Ultra';
-  src: url('../fonts/neo_sans/NeoSansPro-Ultra.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Ultra.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.svg#NeoSansPro-Ultra') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.woff2') format('woff2');
+  font-family: 'WorkSans-Medium';
+  src: url('../fonts/WorkSans/WorkSans-medium/WorkSans-Medium.eot');
+  src: url('../fonts/WorkSans/WorkSans-medium/WorkSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WorkSans/WorkSans-medium/WorkSans-Medium.svg#WorkSans-Medium') format('svg'),
+  url('../fonts/WorkSans/WorkSans-medium/WorkSans-Medium.ttf') format('truetype'),
+  url('../fonts/WorkSans/WorkSans-medium/WorkSans-Medium.woff') format('woff'),
+  url('../fonts/WorkSans/WorkSans-medium/WorkSans-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NeoSansPro-Bold';
-  src: url('../fonts/neo_sans/NeoSansPro-Bold.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.svg#NeoSansPro-Bold') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.woff2') format('woff2');
+  font-family: 'WorkSans-Regular';
+  src: url('../fonts/WorkSans/WorkSans-regular/WorkSans-Regular.eot');
+  src: url('../fonts/WorkSans/WorkSans-regular/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WorkSans/WorkSans-regular/WorkSans-Regular.svg#WorkSans-Regular') format('svg'),
+  url('../fonts/WorkSans/WorkSans-regular/WorkSans-Regular.ttf') format('truetype'),
+  url('../fonts/WorkSans/WorkSans-regular/WorkSans-Regular.woff') format('woff'),
+  url('../fonts/WorkSans/WorkSans-regular/WorkSans-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NeoSansPro-Regular';
-  src: url('../fonts/neo_sans/NeoSansPro-Regular.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.svg#NeoSansPro-Regular') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.woff2') format('woff2');
+  font-family: 'WorkSans-Bold';
+  src: url('../fonts/WorkSans/WorkSans-bold/WorkSans-Bold.eot');
+  src: url('../fonts/WorkSans/WorkSans-bold/WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WorkSans/WorkSans-bold/WorkSans-Bold.svg#WorkSans-Bold') format('svg'),
+  url('../fonts/WorkSans/WorkSans-bold/WorkSans-Bold.ttf') format('truetype'),
+  url('../fonts/WorkSans/WorkSans-bold/WorkSans-Bold.woff') format('woff'),
+  url('../fonts/WorkSans/WorkSans-bold/WorkSans-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans-SemiBold';
+  src: url('../fonts/WorkSans/WorkSans-semiBold/WorkSans-SemiBold.eot');
+  src: url('../fonts/WorkSans/WorkSans-semiBold/WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WorkSans/WorkSans-semiBold/WorkSans-SemiBold.svg#WorkSans-SemiBold') format('svg'),
+  url('../fonts/WorkSans/WorkSans-semiBold/WorkSans-SemiBold.ttf') format('truetype'),
+  url('../fonts/WorkSans/WorkSans-semiBold/WorkSans-SemiBold.woff') format('woff'),
+  url('../fonts/WorkSans/WorkSans-semiBold/WorkSans-SemiBold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 
-@mixin  ms_100($fsize){
-  font-family: 'NeoSansPro-Light', Arial, Tahoma, sans-serif;
+@font-face {
+  font-family: 'WorkSans-ExtraBold';
+  src: url('../fonts/WorkSans/WorkSans-extraBold/WorkSans-ExtraBold.eot');
+  src: url('../fonts/WorkSans/WorkSans-extraBold/WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/WorkSans/WorkSans-extraBold/WorkSans-ExtraBold.svg#WorkSans-ExtraBold') format('svg'),
+  url('../fonts/WorkSans/WorkSans-extraBold/WorkSans-ExtraBold.ttf') format('truetype'),
+  url('../fonts/WorkSans/WorkSans-extraBold/WorkSans-ExtraBold.woff') format('woff'),
+  url('../fonts/WorkSans/WorkSans-extraBold/WorkSans-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@mixin  ms_300($fsize){
+  font-family: 'WorkSans-Light', Arial, Tahoma, sans-serif;
   font-weight: normal;
   font-size: $fsize;
 
 }
-@mixin ms_300($fsize){
-  font-family: 'NeoSansPro-Regular', Arial, Tahoma, sans-serif;
+@mixin ms_400($fsize){
+  font-family: 'WorkSans-Regular', Arial, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: $fsize;
+}
+
+@mixin ms_500($fsize){
+  font-family: 'WorkSans-Medium', Arial, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: $fsize;
+}
+
+@mixin ms_600($fsize){
+  font-family: 'WorkSans-SemiBold', Arial, Tahoma, sans-serif;
   font-weight: normal;
   font-size: $fsize;
 }
 
 @mixin ms_700($fsize){
-  font-family: 'NeoSansPro-Bold', Arial, Tahoma, sans-serif;
+  font-family: 'WorkSans-Bold', Arial, Tahoma, sans-serif;
   font-weight: normal;
   font-size: $fsize;
 }
 
-@mixin ms_900($fsize){
-  font-family: 'NeoSansPro-Ultra', Arial, Tahoma, sans-serif;
+@mixin ms_800($fsize){
+  font-family: 'WorkSans-ExtraBold', Arial, Tahoma, sans-serif;
   font-weight: normal;
   font-size: $fsize;
 }

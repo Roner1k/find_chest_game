@@ -20,11 +20,12 @@ $blue-text: #0382C3;
 body {
   background: #fff;
   color: $text_color;
-  font-family:  Helvetica, Arial, sans-serif;
+  font-family:  WorkSans-Regular, Arial, sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   font-smoothing: antialised;
 }
 
@@ -44,6 +45,7 @@ button, input, button:hover, button:active, button:focus,
 input:focus, input:active {
   text-decoration: none;
   outline: none;
+  color: white;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

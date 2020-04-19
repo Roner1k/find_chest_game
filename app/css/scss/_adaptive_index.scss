@@ -2,7 +2,7 @@ $phone-width: 480px;
 $nedophone-width: 575px;
 $tablet-width: 768px;
 $desktop-width: 980px;
-$biggerdesktop-width: 1240px;
+$biggerdesktop-width: 1280px;
 $nofhd: 1601px;
 
 @mixin nofhd {
@@ -64,8 +64,9 @@ $nofhd: 1601px;
     }
   }
 
-  @mixin fontsize($desktop, $tablet, $phone) {
-    font-size: $desktop !important;
+  @mixin fontsize($nofhd, $tablet, $phone) {
+
+    font-size: $nofhd !important;
 
     @include tablet {
       font-size: $tablet !important;
@@ -74,9 +75,3 @@ $nofhd: 1601px;
       font-size: $phone !important;
     }
   }
-//
-//@import "referral";
-//@import "events";
-//@import "page-case-studies";
-//@import "hipaa_security";
-//@import "carrers";

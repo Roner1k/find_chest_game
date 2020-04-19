@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'WorkSans-Bold';
+  src: url('WorkSans-Bold.eot');
+  src: url('WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('WorkSans-Bold.svg#WorkSans-Bold') format('svg'),
+       url('WorkSans-Bold.ttf') format('truetype'),
+       url('WorkSans-Bold.woff') format('woff'),
+       url('WorkSans-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

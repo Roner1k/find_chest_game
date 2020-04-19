@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'WorkSans-Light';
+  src: url('WorkSans-Light.eot');
+  src: url('WorkSans-Light.eot?#iefix') format('embedded-opentype'),
+       url('WorkSans-Light.svg#WorkSans-Light') format('svg'),
+       url('WorkSans-Light.ttf') format('truetype'),
+       url('WorkSans-Light.woff') format('woff'),
+       url('WorkSans-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

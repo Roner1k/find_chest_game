@@ -1,159 +1,102 @@
-figure {
-  padding: 15px;
-
-  img {
-    margin: 0 auto;
-    display: block;
+#page-title {
+  color: white;
+  padding: 10.5% 17.35%;
+  background-color: #001F36;
+  background-image: url("../img/GettyImages-1148233882.png");
+  background-size: cover;
+  @include nofhd{
+    padding: 10.5% 8.05%;
   }
 
-  .photo-description {
+  .title-wrap {
+    padding-bottom: 6%;
+    padding-top: 6%;
     text-align: center;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: 700;
-  }
 
-  button[type=button] {
-    width: 133px;
-    padding: 5px;
-    display: block;
-    background-color: #0b93d5;
-    margin: 10px auto;
-    color: whitesmoke;
-    box-shadow: black 0 0 4px;
 
-  }
-
-  input {
-    display: block;
-    width: 222px;
-    margin: 0 auto;
-    text-align: center;
-    border-bottom: dimgrey 1px solid;
-  }
-}
-
-.second-task {
-  margin-top: 30px;
-
-  button[onclick="secondFunction()"] {
-    width: 133px;
-    padding: 5px;
-    display: block;
-    background-color: #0b93d5;
-    margin: 20px auto;
-    color: whitesmoke;
-    box-shadow: black 0 0 4px;
-  }
-
-  span {
-    display: block;
-    width: 30px;
-    border: black 1px solid;
-    height: 1px;
-
-    &.last {
-      position: relative;
-      width: 55px;
-
-      &:before {
-        position: absolute;
-        right: 83px;
-        top: -11px;
-        display: block;
-        width: 20px;
-        height: 20px;
-        color: black;
-        content: '=';
-      }
-    }
-  }
-
-  #result-int {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 50px;
-    display: block;
-    //background-color: whitesmoke;
-    position: absolute;
-    left: -5px;
-    top: -25px;
-    text-align: center;
-    border: none;
-  }
-
-  input {
-    display: block;
-    width: 30px;
-    text-align: center;
-    background-color: #f1f1f1;
-
-    &[disabled] {
-      width: 55px;
-      background-color: #959595;
+    h1 {
       color: whitesmoke;
+      @include ms_700(3.8rem);
 
-      &::placeholder {
-        color: whitesmoke;
+      letter-spacing: .05em;
+      line-height: 60px;
+
+      @include nofhd {
+        line-height: 1.1;
+        text-align: center;
+        @include fontsize(3rem, 2rem, 1.7rem);
+      }
+    }
+
+    .title-description {
+      @include ms_500(1.5rem);
+      line-height: 34px;
+      @include nofhd{
+        @include fontsize(1.4rem,1.2rem,1rem)
+      }
+
+      p {
+        padding-top: 50px;
+        @include nofhd{
+          padding-top: 4%;
+          line-height: 1.1;
+        }
       }
     }
   }
 
-  input[maxlength='1'] {
-    display: block;
-    width: 45px;
-    height: 20px;
-    font-size: 16px;
-    border: dimgrey 1px solid;
-    text-align: center;
+  .consultation-form-wrap {
+    padding: 30px 37px;
+    margin-top: 18px;
+    background-image: linear-gradient(45deg, #ccdced 0%, #ffffff 100%);
+    max-height: 713px;
+    min-width: 460px;
+    max-width: 460px;
+    color: black;
+    border-radius: 0 50px 0 50px;
+    @include ms_600(1.7rem);
 
-    &:focus {
-      border: none;
+    .form-description {
+      @include ms_600(1.7rem);
+      max-height: 203px;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+
+      p {
+        @include ms_600(1.1rem);
+        display: block;
+        padding: 20px 0 5px;
+        line-height: 18px;
+
+      }
+
     }
-  }
-}
 
-.third-task {
-  padding-top: 20px;
+    .label-input {
+      @include ms_600(.8rem);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: block;
+      margin: 10px 0 0;
 
-  h3 {
-    padding: 15px;
-  }
 
-  #clock {
-    text-align: center;
-    width: 333px;
-    height: 40px;
-    margin: 10px auto;
-    background-color: #e5e5e5;
-    color:#0b93d5 ;
-    text-shadow: 0 0 4px #95ced5;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-  }
+    }
 
-  label {
-    font-size: 18px;
-    margin: 0 10px;
-  }
+    input {
+      height: 35px;
+    }
 
-  input {
-    border:1px solid #4aaad2;
-    border-radius: 5px;
-    box-shadow: 0 0 4px  #4aaad2;
-    width: 40px;
-    text-align: center;
-  }
-  button{
-    width: 133px;
-    padding: 5px;
-    display: block;
-    background-color: #0b93d5;
-    margin: 20px auto;
-    color: whitesmoke;
-    box-shadow: black 0 0 4px;
+    .form-send-but {
+      margin-top: 10px;
+      max-width: 385px;
+      width: 100%;
+      height: 60px;
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #b84f00 0%, #fe8a03 100%);
+    }
+
+    span {
+      color: #ff8b03;
+    }
   }
 }
