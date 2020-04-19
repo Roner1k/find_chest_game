@@ -3,7 +3,7 @@ $nedophone-width: 575px;
 $tablet-width: 768px;
 $desktop-width: 980px;
 $biggerdesktop-width: 1280px;
-$nofhd: 1602px;
+$nofhd: 1601px;
 
 @mixin nofhd {
   @media (max-width: #{$nofhd}) {
