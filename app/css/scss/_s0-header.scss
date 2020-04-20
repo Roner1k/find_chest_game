@@ -118,7 +118,7 @@
 
         @include nedophone {
           position: absolute;
-          bottom: -30px;
+          bottom: 0;
           @include ms_800(1.3rem);
           text-align: center;
           right: 0;

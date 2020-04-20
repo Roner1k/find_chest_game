@@ -1,0 +1,151 @@
+#questions {
+  padding: 4%;
+  @include tablet {
+    padding: 2%;
+  }
+
+  & > p {
+    padding: 15px;
+    @include ms_400(1.5rem);
+    text-align: center;
+    @include tablet {
+      @include fontsize(1.4rem, 1.3rem, 1.2rem);
+      padding: 5%;
+      line-height: 1.1;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    @include ms_700(2rem);
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    @include biggerdesktop {
+      @include fontsize(1.8rem, 1.6rem, 1.4rem);
+    }
+  }
+
+  .questions-wrap {
+    @include ms_700(1.25rem);
+    position: relative;
+    text-align: center;
+    max-width: 1260px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(630px, 1fr));
+    grid-template-rows: repeat(2, 303px);
+    justify-items: center;
+    @include biggerdesktop {
+      grid-template-columns: repeat(auto-fit, minmax(452px, 1fr));
+    }
+    @include nedophone {
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-rows: repeat(4, 1fr);
+
+    }
+
+    .center-logo {
+      position: absolute;
+      background-color: transparent;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include tablet {
+        top: 26px;
+        left: 26px;
+      }
+
+      img {
+        width: 90px;
+        height: 90px;
+        @include tablet {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    & > div {
+      background-color: black;
+      color: whitesmoke;
+      text-align: center;
+    }
+
+    .que1 {
+      width: 100%;
+      min-height: 303px;
+      padding: 2% 14.29%;
+      border-radius: 20px 0 0;
+      background-image: linear-gradient(-30deg, #b84f00 0%, #fe8a03 100%);
+      @include tablet {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+
+    .que2 {
+      width: 100%;
+      min-height: 303px;
+      padding: 2% 14.29%;
+      border-radius: 0 20px 0 0;
+      background-image: linear-gradient(45deg, #12283f 0%, #203c64 100%);
+      @include tablet {
+        border-radius: 0;
+      }
+    }
+
+    .que3 {
+      width: 100%;
+      min-height: 303px;
+      padding: 5% 14.29%;
+      border-radius: 0 0 0 20px;
+      background-image: linear-gradient(45deg, #1c48ff 0%, #06287e 100%);
+      @include tablet {
+        border-radius: 0;
+      }
+    }
+
+    .que4 {
+      padding: 2% 14.29%;
+      width: 100%;
+      min-height: 303px;
+      border-radius: 0 0 20px;
+      background-image: linear-gradient(-30deg, #093b6f 0%, #0e1c33 100%);
+      @include tablet {
+        border-radius: 0 0 20px 20px;
+      }
+    }
+
+    .que-description {
+      max-width: 450px;
+      line-height: 24px;
+      padding-top: 5%;
+      @include biggerdesktop {
+        @include ms_600(1.1rem);
+      }
+    }
+  }
+}
+
+#world-map {
+  padding: 2%;
+  background-color: black;
+  @include nedophone{
+    padding: 2% 0;
+  }
+
+  .desktop-version {
+    @include nedophone {
+      display: none;
+    }
+  }
+  .mobile-version {
+    display: none;
+    @include nedophone {
+      display: block;
+    }
+  }
+
+}

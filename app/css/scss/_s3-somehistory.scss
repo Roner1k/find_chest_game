@@ -1,0 +1,96 @@
+#some-history {
+  padding: 3.7% 24.2%;
+  position: relative;
+  margin-bottom: 20px;
+  background-image: url("../img/bcground-s3.jpg");
+  background-size: cover;
+  background-position: center;
+  max-height: 577px;
+  @include nedophone{
+    max-height: 100%;
+  }
+  @include nofhd {
+    padding: 3% 17%;
+  }
+  @include biggerdesktop {
+    padding: 3% 10%;
+  }
+  @include phone {
+    padding: 3%;
+  }
+
+  .some-history-content {
+    min-width: 1104px;
+    margin: 0 auto;
+    @include tablet {
+      min-width: 100%;
+    }
+
+    .top-text {
+      padding: 0 1% 3.7%;
+      @include ms_400(1.25rem);
+      line-height: 24px;
+      max-width: 917px;
+      @include biggerdesktop {
+        @include fontsize(1.2rem, 1.1rem, 1rem);
+      }
+      @include tablet {
+        max-width: 100%;
+      }
+      @include laphone{
+        padding: 4% 2%;
+
+      }
+    }
+
+    h3 {
+      display: inline-block;
+      @include ms_600(1.75rem);
+      color: whitesmoke;
+      padding-top: 15px;
+      line-height: 34px;
+      width: 740px;
+      height: 103px;
+      background: linear-gradient(10deg, #12283f 0%, #203c64 100%);
+      @include tablet {
+        @include fontsize(1.6rem, 1.4rem, 1.2rem);
+        padding: 3%;
+        width: 100%;
+        line-height: 1.2;
+      }
+      @include phone {
+        padding: 3% 2%;
+      }
+    }
+
+    .bottom-text {
+      @include ms_600(1.25rem);
+      padding: 3.7% 1%;
+      max-width: 627px;
+      display: inline-block;
+      letter-spacing: 0.00001em;
+      @include tablet {
+        max-width: 100%;
+      }
+      @include laphone{
+        padding: 4% 2%;
+        line-height: 1.2;
+        font-size: 1.1rem;
+        letter-spacing: .05em;
+      }
+    }
+
+    img {
+      margin-top: -240px;
+      margin-left: 40px;
+      @include tablet {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 190px;
+        height: 190px;
+        opacity: .3;
+      }
+    }
+  }
+}
