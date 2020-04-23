@@ -28,30 +28,52 @@
                         <p>Fill in your information below to schedule
                         your consultation</p>
                     </div>
-                    <form action="success.php" class="consultation-form">
+                    <form action="../success.php" method="post" class="consultation-form">
                         <div class="form-row">
+
                             <div class="form-group col-md-6 mb-0">
                                 <label class="label-input">First name <span>*</span></label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="name" required class="form-control">
                             </div>
+
                             <div class="form-group col-md-6 mb-0">
                                 <label class="label-input">Last Name <span>*</span> </label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="lastName" required class="form-control">
                             </div>
+
                         </div>
+
                         <label class="label-input kos">Company name <span>*</span></label>
-                        <input type="text" class="form-control">
+                        <input type="text" name="companyName" required class="form-control">
+
                         <label class="label-input">Location <span>*</span></label>
-                        <input type="text" class="form-control">
+                        <input type="text"   required class="form-control">
+
                         <label class="label-input">EMAIL Address <span>*</span></label>
-                        <input type="text" class="form-control">
+                        <input type="email" name="email" required class="form-control">
+
                         <label class="label-input">Phone number <span>*</span></label>
-                        <input type="text" class="form-control">
-                        <button type="submit" class="form-send-but">Sign in</button>
+                        <input type="tel" name="tel" required id="tel" class="form-control">
+
+                        <button type="submit" data-submit class="form-send-but">Sign in</button>
 
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div class="background">
+            <div class="outside">
+                <div class="inside"><span><i class="fas fa-envelope"></i></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <div class="alert">
+            <h3>Success!</h3>
         </div>
     </div>
 </section>

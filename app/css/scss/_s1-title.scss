@@ -81,6 +81,8 @@
     border-radius: 0 50px 0 50px;
     @include biggerdesktop {
       min-width: 400px;
+      max-height: 100%;
+
       @include ms_600(1.4rem);
     }
     @include laphone {
@@ -93,6 +95,7 @@
       max-height: 203px;
       line-height: 28px;
       letter-spacing: 0.01em;
+
       @include biggerdesktop {
         @include ms_600(1.5rem);
       }
@@ -143,3 +146,171 @@
     }
   }
 }
+
+//form validation
+
+label.error {
+  color: red !important;
+  display: block;
+  width: 100%;
+  text-align: right;
+  height: 4px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  @include laphone{
+    margin-top: 5px;
+    margin-bottom: 18px;
+  }
+}
+
+input.form-control.error {
+  border: 1px red solid !important;
+}
+
+textarea#message-text {
+  margin-bottom: 20px;
+  min-height: 40px;
+  max-height: 70px;
+}
+
+#preloader{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 28, 28, 0.88);
+  z-index: 888;
+
+  .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    border: 17px dashed rgba(25, 25, 25, 0.15);
+    animation-name: quad;
+    animation-timing-function: steps(100);
+    animation-direction: alternate-reverse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    @keyframes quad {
+      50% {
+        border: 5px dashed rgba(255, 254, 253, 0.54);
+        border-radius: 30%;
+        transform: translate(-50%, -50%);
+      }
+      100% {
+        width: 170px;
+        height: 100px;
+        border: 1px solid rgba(115, 113, 245, 0.95);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .outside {
+      width: 70%;
+      height: 19px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(45, 76, 255, 0.59);
+      border-radius: 20px;
+      animation-name: quadout;
+      animation-timing-function: steps(100);
+      animation-direction: alternate-reverse;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+
+      @keyframes quadout {
+
+        50% {
+          transform: translate(-50%, -50%);
+        }
+        100% {
+          background-color: rgba(255, 255, 255, 0.06);
+          width: 100%;
+          height: 100%;
+          transform: translate(-50%, -50%) rotateX(180deg);
+        }
+      }
+
+      .inside {
+        color: whitesmoke;
+        text-align: center;
+        height: 100%;
+        letter-spacing: .5em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47%, -48%);
+        animation-name: quadout1;
+        animation-timing-function: steps(100);
+        animation-direction: alternate-reverse;
+        animation-duration: 6s;
+        animation-delay: 3;
+        animation-iteration-count: infinite;
+        @keyframes quadout1 {
+          10% {
+            left: 550%;
+          }
+          50% {
+            left: 100%
+          }
+          100% {
+            background-color: rgba(255, 255, 255, 0.06);
+            transform: translate(-47%, -48%);
+          }
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          .fas.fa-envelope{
+            font-size: 45px ;
+          }
+        }
+      }
+    }
+  }
+}
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.5);
+  z-index: 100;
+}
+
+#overlay h3{
+  background: #4170A7;
+  padding: 50px;
+  max-width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  @include ms_800(25px);
+  line-height: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 103;
+  text-align: center;
+  color: #FFFFFF;
+  border: 2px solid rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+

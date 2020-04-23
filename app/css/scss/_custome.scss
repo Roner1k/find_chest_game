@@ -5,7 +5,9 @@
 }
 
 html {
+//  overflow: unset;
   overflow-x: hidden;
+  //overflow-y: hidden;
 }
 
 html,
@@ -15,8 +17,6 @@ body {
 $text_color: #000;
 $text_color2: whitesmoke;
 $blue-text: #0382C3;
-//$theme_grafit: #B5B5B5;
-
 body {
   background: #fff;
   color: $text_color;

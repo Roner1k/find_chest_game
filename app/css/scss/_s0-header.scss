@@ -203,6 +203,7 @@
               .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
                 background-color: #fff;
                 z-index: 100;
+
               }
 
               &:hover {
@@ -298,4 +299,8 @@
 
     }
   }
+}
+.lock{
+  overflow: hidden !important;
+  position: relative;
 }
