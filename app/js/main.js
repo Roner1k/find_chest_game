@@ -170,7 +170,9 @@ let currentTime = new Date,
         minutes: 58,
         seconds: 56,
     };
-
+function addTime(a, b) {
+    return a + b;
+}
 
 timeButton.onclick = function () {
     let addHour = +document.getElementById('hours').value,
@@ -179,6 +181,7 @@ timeButton.onclick = function () {
     if (addTime(myTimeObj.seconds, addSecond) > 59) {
         myTimeObj.seconds = (myTimeObj.seconds + addSecond) - 60;
         let minuteCounter = addSecond;
+
         for (; minuteCounter > 0; minuteCounter -= 60) {
             myTimeObj.minutes++;
             if (myTimeObj.minutes >= 60) {
@@ -188,6 +191,7 @@ timeButton.onclick = function () {
                     myTimeObj.hours = 0;
                 }
             }
+            if(minuteCounter < 59)
         }
     } else {
         myTimeObj.seconds += addSecond;
@@ -201,9 +205,7 @@ function addNull(check) {
     return check;
 }
 
-function addTime(a, b) {
-    return a + b;
-}
+
 
 setInterval(tick, 1000);
 
