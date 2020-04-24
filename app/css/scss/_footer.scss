@@ -1,311 +1,334 @@
+@mixin socs {
+  width: 29px;
+  height: 29px;
+  text-align: center;
+  color: #374556;
+  font-size: 0.9rem;
+  padding-top: 3.5px;
+  background-size: cover;
+}
+
 footer {
-  background-color: #06141E;
-  color: whitesmoke;
 
-  h4 {
-    color: whitesmoke;
-    @include ms_600(1.7rem);
-    text-align: left;
-    @include nedophone {
-      text-align: center;
+
+  .subs-wrap {
+    @include desktop {
+      padding: 50px 19.55%;
     }
-  }
+
+    @include nofhd {
+      padding: 30px 9%;
+    }
+    width: 100%;
+    background-color: #3F4C5D;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 
 
-  .footer-top-wrap {
-    border: 1px solid transparent;
-    border-bottom-color: #174055;
+    .sub-wrap-logo {
+      // order: 3;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      @include tablet {
+        margin: 20px auto;
+      }
 
-    .footer-top {
-      .col-lg-4:first-child .footer-top__item {
-        @include tablet {
-          padding-left: 15%;
+
+      .logo-circle {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        border: 1px solid whitesmoke;
+        margin-right: 20px;
+        @include laphone {
+          margin: 15px auto;
         }
-        @include nedophone {
-          padding: 6% 0;
 
-        }
+        .logo-img {
+          font-size: 23px;
+          width: 24px;
+          height: 24px;
+          padding-top: 12px;
+          color: whitesmoke;
+          margin: auto;
 
-        p {
-          padding: 6% 0;
-          line-height: 1.7;
-          @include nedophone {
-            max-width: 310px;
-            margin: 0 auto;
-            padding: 3% 0;
-          }
-        }
-
-        a {
-          display: block;
-          line-height: 1.7;
-          @include nedophone {
-            max-width: 310px;
-            margin: 0 auto;
-          }
-
-          span {
-            &:hover {
-              transition: all .3s ease-in-out;
-              color: #FF8C00;
-            }
-          }
         }
       }
 
-      .col-lg-4:nth-child(2) .footer-top__item {
-        max-width: 367px;
-        text-align: center;
-        padding: 32% 6.5%;
-        @include tablet {
-          padding: 6%;
-          max-width: 100%;
-          border-right: none;
-          border-bottom-color: #174055;
-          border-left-color: #174055;
-        }
-
-
-        .table-wrap {
-          padding-top: 6%;
-
-          table {
-            width: 276px;
-            @include ms_500(1.1rem);
-            @include nedophone {
-              margin: 0 auto;
-            }
-
-            tbody {
-              width: 100%;
-
-              tr {
-                padding-bottom: 22px;
-
-                td {
-                  width: 45%;
-                  text-align: left;
-                  line-height: 1.7;
-                }
-              }
-
-              tr td:first-of-type {
-                text-align: left;
-                width: 55%;
-              }
-            }
-          }
-        }
-      }
-
-      .footer-top__item, {
-        padding: 32% 0 1%;
-        height: 100%;
-        border: 1px solid transparent;
-        border-right-color: #174055;
-        @include tablet {
-          padding: 6%;
-          width: 100%;
-          border-bottom-color: #174055;
-        }
-      }
-
-      .footer-top__news {
-        padding: 32% 0 8% 10%;
-        height: 100%;
-        border: 1px solid transparent;
-        @include tablet {
-          padding: 6% 0 3%;
-          br {
-            display: none
-          }
-          max-width: 555px;
+      .sub-wrap-text {
+        @include ms_900(19px);
+        line-height: 1.2;
+        letter-spacing: .05em;
+        @include laphone {
+          text-align: center;
           margin: 0 auto;
         }
+        @include fontsize(19px, 1rem, .9rem)
 
-        h4 {
-          padding-bottom: 6%;
-          @include tablet {
-            padding-bottom: 3%;
-          }
-
-        }
-
-        .footer-top__news__item {
-          & a:first-child {
-            color: #FF8C00;
-            @include ms_700(1.25rem);
-          }
-
-          p {
-            padding: 1% 0 2%;
-          }
-
-          & a:last-child {
-            padding: 5% 0;
-            display: block;
-            color: #547D9A;
-            @include ms_500(1rem);
-            @include tablet {
-              padding: 0 0 4%;
-            }
-
-            &:hover {
-              transition: all .3s ease-in-out;
-              color: #FF8C00;
-            }
-          }
-        }
       }
     }
-  }
 
-  .footer-bottom-wrap {
-    padding: 2% 0 6%;
-
-    .footer-bottom-wrap__item {
-      border: 1px solid transparent;
-      border-right-color: #174055;
+    .subs-mail {
       @include nedophone {
-        border: none;
         margin: 0 auto;
       }
 
-      h4 {
-        padding-bottom: 8%;
+      .hide-label {
+        display: none;
       }
 
-      a {
-        color: #FF8C00;
-      }
-
-    }
-
-    .col-lg-3 .footer-bottom-wrap__item {
-      padding-bottom: 3%;
-
-      @include tablet {
-        h4 {
-          text-align: center;
-          padding-bottom: 2%;
-        }
-
-        border: none;
+      input#subscribe-email {
+        @include ms_300(13px);
+        background-color: #3F4C5D;
+        color: whitesmoke;
         text-align: center;
-        width: 100%;
-      }
-    }
-
-    .col-lg-4 {
-      .footer-bottom-wrap__item {
-        padding-left: 11%;
-        border: none;
-        position: relative;
-        @include tablet {
-          padding: 3%;
-        }
-
-        p {
-          display: block;
-          margin-bottom: 1%;
-          @include nedophone {
-            display: block;
-            max-width: 310px;
-            margin: 0 auto;
-          }
-        }
-
-        & > a {
-          color: #547D9A;
-          @include nedophone {
-            display: block;
-            max-width: 310px;
-            margin: 0 auto;
-          }
-        }
-
-        .twitter-bottom, .twitter-bottom a {
-          color: #FF8C00;
-        }
-
-        .twitter-bottom {
-          transform: translate(90px, 30px);
-          @include phone {
-            transform: translate(40px, 30px);
-          }
-          @include nedophone {
-            position: absolute;
-            text-align: center;
-            bottom: -10%;
-            width: 310px;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-
-          a {
-            padding: 0 1%;
-          }
+        min-width: 220px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid whitesmoke;
+        @include nedophone {
+          margin: 0 auto;
         }
       }
     }
 
-    .col-lg-5 {
-      .footer-bottom-wrap__item {
-        max-width: 420px;
-        @include tablet {
-          padding: 5% 0;
+    .subs-button {
+      @include nedophone {
+        margin: 20px auto;
+      }
+
+      button[type="button"] {
+        background-color: #3F4C5D;
+        color: whitesmoke;
+        letter-spacing: 0.04em;
+        border: 1px solid whitesmoke;
+        border-radius: 5px;
+        width: 155px;
+        height: 40px;
+        @include ms_900(16px);
+        transition: all .5s ease;
+
+
+        &:hover {
+          background-color: #af0000;
+          border: 1px solid rgba(245, 245, 245, 0.48);
+          font-size: 18px;
+          transition: all .5s ease;
+          box-shadow: 0 0 10px #af0000;
         }
 
-        p {
-          max-width: 350px;
-          display: block;
-          margin-bottom: 1%;
-          @include nedophone {
-            max-width: 310px;
-            margin: 0 auto;
-          }
-        }
-
-        a {
-          color: #547D9A;
-          @include nedophone {
-            display: block;
-            max-width: 310px;
-            margin: 0 auto;
-          }
-        }
       }
     }
   }
 
-  .footer-under-bottom {
-    background-color: black;
-    color: whitesmoke;
-    padding: 0 20.5%;
-    @include nofhd {
-      padding: 0 10%;
+  .footer-links {
+    color: #969BA2;
+    width: 100%;
+    background-color: #3F4C5D;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @include desktop {
+      padding: 30px 19.55%;
     }
-    @include tablet {
-      padding: 3%;
-      font-size: .8rem;
+    @include nofhd {
+      padding: 30px 9%;
     }
     @include nedophone {
-      p {
-        text-align: center;
-        width: 100%;
-      }
-      .footer-bottom__links {
-        text-align: center;
-        width: 100%;
-      }
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
     }
 
-    .footer-bottom__links {
-      color: #547D9A;
+    .footer-column {
+
+      &:first-child {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include tablet {
+          &:first-child {
+            width: 50%;
+            justify-content: flex-start;
+            margin: 6px 0;
+          }
+        }
+        @include nedophone {
+          &:first-child {
+            justify-content: center;
+          }
+        }
+      }
+
+      @include tablet {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          width: 50%;
+        }
+        &:nth-child(2) {
+          order: -1;
+        }
+        &:nth-child(3) {
+          order: -1;
+        }
+      }
 
       a {
-        color: #547D9A;
+        color: whitesmoke;
+        .footer-logo {
+          border: 1px #969BA2 solid;
+          border-radius: 5px;
+          width: 57px;
+          height: 57px;
+          padding-top: 5px;
+          margin-right: 10px;
+          @include tablet {
+            margin: 5px 10px 5px 0;
+          }
+          @include nedophone {
+            margin: 5px 0;
+          }
+
+
+          .inside-logo-body {
+            @include ms_100(16px);
+            padding-top: 8px;
+            width: 45px;
+            height: 45px;
+            border-radius: 5px;
+            border: 1px #969BA2 solid;
+            margin: 0 auto;
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+      }
+
+      .footer-description {
+        @include ms_300(11px);
+        color: #969BA2;
+      }
+
+      .contacts {
+        @include ms_700(14px);
+        line-height: 1.5;
+
+        span {
+          @include ms_300(13px);
+        }
+      }
+
+      .phone {
+        margin-top: 6px;
+        @include ms_700(14px);
+
+        a {
+          @include ms_300(13px);
+          color: #969BA2;
+        }
+      }
+
+      .work-hour {
+        @include ms_700(14px);
+        line-height: 1.5;
+
+        span {
+          @include ms_300(13px);
+        }
+      }
+
+      .footer-main-mail {
+        @include ms_700(14px);
+        line-height: 1.5;
+        margin-top: 6px;
+
+        a {
+          @include ms_300(13px);
+          color: #969BA2;
+        }
+      }
+
+      .be-friends {
+        @include ms_900(14px);
+        letter-spacing: .04em;
+        @include tablet {
+          margin-top: 6px;
+
+        }
+      }
+
+      .footer-socials {
+        padding-top: 15px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+          padding-right: 30px;
+          justify-content: space-around;
+        }
+        @include nedophone {
+          padding-right: 0;
+        }
+
+        .soc1 {
+          @include socs;
+          background-image: url("../img/soc1.png");
+          transition: all .5s ease;
+
+          &:hover {
+            transition: all .5s ease;
+            transform: scale(1.8);
+            filter: invert(100%);
+          }
+        }
+
+        .soc2 {
+          @include socs;
+          background-image: url("../img/soc2.png");
+          transition: all .5s ease;
+
+          &:hover {
+            transition: all .5s ease;
+            transform: scale(1.8);
+            filter: invert(100%);
+          }
+        }
+
+        .soc3 {
+          @include socs;
+          background-image: url("../img/soc3.png");
+          transition: all .5s ease;
+
+          &:hover {
+            transition: all .5s ease;
+            transform: scale(1.8);
+            filter: invert(100%);
+          }
+        }
+
+        .soc4 {
+          @include socs;
+          background-image: url("../img/soc4.png");
+          transition: all .5s ease;
+
+          &:hover {
+            transition: all .5s ease;
+            transform: scale(1.8);
+            filter: invert(100%);
+          }
+        }
+
+
       }
     }
   }
+
 }

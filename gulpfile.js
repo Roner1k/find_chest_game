@@ -203,15 +203,15 @@ gulp.task('htaccess:build', function() {
 });
 
 
-gulp.task('sftp', function() {
-    return gulp.src('dist/**/*')
-        .pipe(sftp({
-            host: 'kaminskiydmitriy.com',
-            user: 'webmaster@kaminskiydmitriy.com',
-            password: '8219765',
-            remotePath:'/public_html/test1.kaminskiydmitriy.com/'
-        }));
-});
+// gulp.task('sftp', function() {
+//     return gulp.src('dist/**/*')
+//         .pipe(sftp({
+//             host: 'kaminskiydmitriy.com',
+//             user: 'webmaster@kaminskiydmitriy.com',
+//             password: '8219765',
+//             remotePath:'/public_html/test1.kaminskiydmitriy.com/'
+//         }));
+// });
 
 gulp.task('cc', function () {
     return cache.clearAll();

@@ -2,7 +2,7 @@ $phone-width: 480px;
 $nedophone-width: 575px;
 $tablet-width: 768px;
 $desktop-width: 980px;
-$biggerdesktop-width: 1280px;
+$biggerdesktop-width: 1240px;
 $nofhd: 1601px;
 
 @mixin nofhd {
@@ -12,7 +12,7 @@ $nofhd: 1601px;
 }
 
 @mixin biggerdesktop {
-  @media (max-width: #{$biggerdesktop-width + 1}) {
+  @media (min-width: #{$biggerdesktop-width + 1}) {
     @content;
   }
 }
@@ -64,9 +64,8 @@ $nofhd: 1601px;
     }
   }
 
-  @mixin fontsize($nofhd, $tablet, $phone) {
-
-    font-size: $nofhd !important;
+  @mixin fontsize($desktop, $tablet, $phone) {
+    font-size: $desktop !important;
 
     @include tablet {
       font-size: $tablet !important;
@@ -75,3 +74,9 @@ $nofhd: 1601px;
       font-size: $phone !important;
     }
   }
+//
+//@import "referral";
+//@import "events";
+//@import "page-case-studies";
+//@import "hipaa_security";
+//@import "carrers";
