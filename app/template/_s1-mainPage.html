@@ -1,0 +1,62 @@
+<div class="container-xl">
+    <figure>
+        <img src="img/AE86.jpg" width="520" height="320" alt="AE86 photo">
+        <div class="photo-description">Toyota Sprinter Trueno AE86</div>
+        <input type="number" placeholder="how many kilometers?">
+        <button type="button" onclick="AverageSpeedCalc();">Time calculator</button>
+
+        <button type="button" onclick="autoInfo();this.disabled = true;">Click 4 more info</button>
+    </figure>
+
+    <div class="second-task">
+        <div class="row align-items-center justify-content-center">
+
+            <div class="col-auto">
+                <input type="number" id='f-n-top' placeholder="1">
+                <span></span>
+                <input type="number" id='f-n-bottom' placeholder="2">
+            </div>
+
+            <div class="col-auto">
+                <input type="text" id="act-value" maxlength="1" placeholder="+ - * /">
+            </div>
+
+            <div class="col-auto">
+                <input type="number" id='s-n-top' placeholder="2">
+                <span></span>
+                <input type="number" id='s-n-bottom' placeholder="3">
+            </div>
+
+            <div class="col-auto">
+                  <span id="result-int">
+                    </span>
+            </div>
+
+            <div class="col-auto">
+                <input type="text" id='res-top' placeholder="0" disabled>
+                <span class="last">
+                  </span>
+                <input type="text" id='res-bottom' placeholder="0" disabled>
+            </div>
+
+        </div>
+        <button type="button" onclick="secondFunction()">result!</button>
+    </div>
+
+</div>
+
+<div class="third-task">
+
+    <h3>Timer</h3>
+    <div id="clock"></div>
+    <div class="row justify-content-center align-content-center mt-4">
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" value="0">
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" value="0">
+        <label for="sec">Seconds:</label>
+        <input type="number" id="sec" value="0">
+    </div>
+    <button class="add-time" type="button">Add input time</button>
+
+</div>

@@ -1,0 +1,159 @@
+figure {
+  padding: 15px;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .photo-description {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  button[type=button] {
+    width: 133px;
+    padding: 5px;
+    display: block;
+    background-color: #0b93d5;
+    margin: 10px auto;
+    color: whitesmoke;
+    box-shadow: black 0 0 4px;
+
+  }
+
+  input {
+    display: block;
+    width: 222px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: dimgrey 1px solid;
+  }
+}
+
+.second-task {
+  margin-top: 30px;
+
+  button[onclick="secondFunction()"] {
+    width: 133px;
+    padding: 5px;
+    display: block;
+    background-color: #0b93d5;
+    margin: 20px auto;
+    color: whitesmoke;
+    box-shadow: black 0 0 4px;
+  }
+
+  span {
+    display: block;
+    width: 30px;
+    border: black 1px solid;
+    height: 1px;
+
+    &.last {
+      position: relative;
+      width: 55px;
+
+      &:before {
+        position: absolute;
+        right: 83px;
+        top: -11px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        color: black;
+        content: '=';
+      }
+    }
+  }
+
+  #result-int {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 50px;
+    display: block;
+    //background-color: whitesmoke;
+    position: absolute;
+    left: -5px;
+    top: -25px;
+    text-align: center;
+    border: none;
+  }
+
+  input {
+    display: block;
+    width: 30px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+    &[disabled] {
+      width: 55px;
+      background-color: #959595;
+      color: whitesmoke;
+
+      &::placeholder {
+        color: whitesmoke;
+      }
+    }
+  }
+
+  input[maxlength='1'] {
+    display: block;
+    width: 45px;
+    height: 20px;
+    font-size: 16px;
+    border: dimgrey 1px solid;
+    text-align: center;
+
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+.third-task {
+  padding-top: 20px;
+
+  h3 {
+    padding: 15px;
+  }
+
+  #clock {
+    text-align: center;
+    width: 333px;
+    height: 40px;
+    margin: 10px auto;
+    background-color: #e5e5e5;
+    color:#0b93d5 ;
+    text-shadow: 0 0 4px #95ced5;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  label {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+  input {
+    border:1px solid #4aaad2;
+    border-radius: 5px;
+    box-shadow: 0 0 4px  #4aaad2;
+    width: 40px;
+    text-align: center;
+  }
+  button{
+    width: 133px;
+    padding: 5px;
+    display: block;
+    background-color: #0b93d5;
+    margin: 20px auto;
+    color: whitesmoke;
+    box-shadow: black 0 0 4px;
+  }
+}
