@@ -171,14 +171,15 @@ timeButton.onclick = function () {
         addMinute = addMinute + Math.floor((myTimeObj.seconds + addSecond) / 60);
         myTimeObj.seconds = (myTimeObj.seconds + addSecond) % 60;
         myTimeObj.minutes += addMinute;
+        myTimeObj.hours += addHour;
 
         if (myTimeObj.minutes > 59) {
             addHour = Math.floor(myTimeObj.minutes / 60);
             myTimeObj.minutes %= 60;
             myTimeObj.hours += addHour;
-            if (myTimeObj.hours >= 24) {
-                myTimeObj.hours = 0;
-            }
+        }
+        if (myTimeObj.hours >= 24) {
+            myTimeObj.hours = 0;
         }
     }
 }
