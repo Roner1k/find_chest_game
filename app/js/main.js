@@ -50,14 +50,17 @@ function AverageSpeedCalc() {
         distance = +document.querySelector('input').value,
         nTime,
         t;
+    if (distance === 0) {
+        alert('Идите пешком');
+    } else {
+        nTime = distance / averageSpeed;
+        t = nTime;
 
-    nTime = distance / averageSpeed;
-    t = nTime;
-
-    for (let i = 4; i <= t; t -= 4) {
-        nTime++;
+        for (let i = 4; i <= t; t -= 4) {
+            nTime++;
+        }
+        alert('You need to ride: ' + nTime.toFixed(2) + ' Hour(s).(minutes)');
     }
-    alert('You need to ride: ' + Math.floor(nTime) + ' Hour(s)');
 };
 
 //2
@@ -83,7 +86,7 @@ function secondFunction() {
     };
 
     if (actValue !== "+" && actValue !== "-" && actValue !== "*" && actValue !== "/") {
-        alert("Проверьте ввод!")
+        alert("Не верное математическое действие!1")
     } else {
         switch (actValue) {
             case "+":
@@ -150,51 +153,33 @@ function secondFunction() {
     ;
 };
 
-// function reduceFrac(numerator, denomerator) {
-//     let a = numerator, b = denomerator;
-//     while (a) {
-//         let c = b % a;
-//         b = a;
-//         a = c;
-//     }
-//     return [numerator / b, denomerator / b]
-// }
-
-
-//3
-
 let currentTime = new Date,
     timeButton = document.querySelector('.add-time'),
     myTimeObj = {
-        hours: 23,
-        minutes: 58,
-        seconds: 56,
+        hours: currentTime.getHours(),
+        minutes: currentTime.getMinutes(),
+        seconds: currentTime.getSeconds(),
     };
-function addTime(a, b) {
-    return a + b;
-}
 
 timeButton.onclick = function () {
     let addHour = +document.getElementById('hours').value,
         addMinute = +document.getElementById('minutes').value,
         addSecond = +document.getElementById('sec').value;
-    if (addTime(myTimeObj.seconds, addSecond) > 59) {
-        myTimeObj.seconds = (myTimeObj.seconds + addSecond) - 60;
-        let minuteCounter = addSecond;
 
-        for (; minuteCounter > 0; minuteCounter -= 60) {
-            myTimeObj.minutes++;
-            if (myTimeObj.minutes >= 60) {
-                myTimeObj.minutes = 0;
-                myTimeObj.hours++;
-                if (myTimeObj.hours >= 24) {
-                    myTimeObj.hours = 0;
-                }
+    if (addSecond > 0 || addMinute > 0 || addHour > 0) {
+
+        addMinute = addMinute + Math.floor((myTimeObj.seconds + addSecond) / 60);
+        myTimeObj.seconds = (myTimeObj.seconds + addSecond) % 60;
+        myTimeObj.minutes += addMinute;
+
+        if (myTimeObj.minutes > 59) {
+            addHour = Math.floor(myTimeObj.minutes / 60);
+            myTimeObj.minutes %= 60;
+            myTimeObj.hours += addHour;
+            if (myTimeObj.hours >= 24) {
+                myTimeObj.hours = 0;
             }
-            if(minuteCounter < 59)
         }
-    } else {
-        myTimeObj.seconds += addSecond;
     }
 }
 
@@ -204,8 +189,6 @@ function addNull(check) {
     }
     return check;
 }
-
-
 
 setInterval(tick, 1000);
 
