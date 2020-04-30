@@ -120,45 +120,67 @@ buySomething.addEventListener('click', function (e) {
 let presentStudents = [[[], [], []], [[], [], []]],
     groupTakeButton = document.getElementById('group-take'),
     saveDataButton = document.getElementById('saveData'),
-    refreshInput = document.querySelectorAll('.task5-form > select, ');
+    refreshSelect = document.querySelectorAll(".task5-form > select, #group-take"),
+    selectGroup,
+    selectLesson,
+    topicName,
+    studentStatus,
+    outStudentData = document.querySelectorAll(".out-cell"),
+    outTopicInfo = document.getElementById('topic-info-out');
 
-console.log(refreshInput)
+function addValues() {
+    selectGroup = +document.getElementById("groups").value;
+    selectLesson = +document.getElementById("lessons").value;
+    topicName = document.getElementById('topic-info-in').value;
+    studentStatus = document.querySelectorAll(".students-info input[type='checkbox']");
+    console.log(selectGroup, selectLesson, topicName, studentStatus);
+}
 
-let selectGroup = +document.getElementById("groups").value,
-    selectLesson = +document.getElementById("lessons").value,
-    studentData = document.querySelectorAll(".out-cell"),
-    topicInfo = document.getElementById('topic-info-out');
+function f5_select() {
+    selectGroup = +document.getElementById("groups").value;
+    selectLesson = +document.getElementById("lessons").value;
+}
+
+refreshSelect.forEach.call(refreshSelect, function (el) {
+    el.addEventListener('mouseenter', f5_select);
+});
 
 groupTakeButton.onclick = () => {
-
-
     if (presentStudents[selectGroup][selectLesson].length > 0) {
         saveDataButton.style.display = 'none';
-        topicInfo.innerHTML = presentStudents[selectGroup][selectLesson][0];
-
-        console.log(presentStudents[selectGroup][selectLesson]);
+        outTopicInfo.innerText = presentStudents[selectGroup][selectLesson][0];
         let k = 0;
-
         for (let i = 1; presentStudents[selectGroup][selectLesson].length > i; i++) {
-            studentData[k].innerHTML = ` ${presentStudents[selectGroup][selectLesson][i]}`;
+            outStudentData[k].innerHTML = ` ${presentStudents[selectGroup][selectLesson][i]}`;
             k++;
         }
-    }else{
-        let returnTopic = document.createElement('input'),
-            returnCheckbox =document.createElement('input');
+    } else {
+        let returnTopic = document.createElement('input');
         returnTopic.id = 'topic-info-in';
         returnTopic.type = 'text';
-        //returnCheckbox.id
-        topicInfo.innerHTML = ' ';
-        topicInfo.append(returnTopic);
+        outTopicInfo.innerHTML = ' ';
+        outTopicInfo.append(returnTopic);
         saveDataButton.style.display = 'block';
-
+        outStudentData.forEach(function (el) {
+            el.innerHTML = '<input type="checkbox">';
+        })
     }
 }
 
-saveDataButton.onclick = () =>{
-    console.log(selectGroup)
-}
+saveDataButton.onclick = () => {
+    addValues();
+    if (presentStudents[selectGroup][selectLesson].length === 0) {
+        presentStudents[selectGroup][selectLesson][0] = topicName;
+        studentStatus.forEach(function (p) {
+
+            if (p.checked === false) {
+                presentStudents[selectGroup][selectLesson].push('Absent!');
+            } else {
+                presentStudents[selectGroup][selectLesson].push('Present!');
+            }
+        });
+    }
+};
 
 
 
