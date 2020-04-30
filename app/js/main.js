@@ -1,213 +1,166 @@
-//'use strict'
-let myCar = {};
+'use strict'
+//1
 
-myCar = {
-    manufacturer: 'Toyota',
-    model: 'AE86',
-    year: 1987,
-    weight: 923 + ' kg',
-    engine: '1.6 L 4A-GEU I4 130 HP ',
-    topSpeed: 200 + " km/h",
-    averageSpeed: 100 + " km/h",
-};
+let task1Start = document.querySelector('.task1 form button');
 
-function autoInfo() {
+task1Start.onclick = () => {
+    let userNameValue = document.querySelector(".task1 form input[name ='name']").value,
+        userMessageValue = document.querySelector(".task1 form textarea[name ='userText']").value,
+        outContent = document.createElement('div'),
+        actionDate = new Date,
+        userDataObj = {};
+    console.log(actionDate.getDay);
 
-    let myCarInfo = document.createElement('div');
-    myCarInfo.className = 'car-information';
-    myCarInfo.style.display = "grid";
-    myCarInfo.style.gridTemplateColumns = "1fr 2fr";
-    myCarInfo.style.alignSelf = 'center';
-    myCarInfo.style.justifyItems = 'center';
-    myCarInfo.style.border = "1px solid black";
-    myCarInfo.style.width = "666px";
-    myCarInfo.style.height = "340px";
-    myCarInfo.style.margin = "10px auto";
-
-    for (let key in myCar) {
-        let carProperty = document.createElement('div'),
-            carPropValue = document.createElement('div');
-        carProperty.style.border = '1px solid black';
-        carProperty.style.width = '100%';
-        carProperty.style.padding = '10px';
-        carPropValue.style.border = '1px solid black';
-        carPropValue.style.width = '100%';
-        carPropValue.style.padding = '10px';
-
-        carProperty.innerText = key[0].toUpperCase() + key.slice(1) + ":";
-        carPropValue.innerText = myCar[key];
-
-        myCarInfo.append(carProperty);
-        myCarInfo.append(carPropValue);
-
-        console.log(carProperty + typeof (carProperty));
-    }
-    document.querySelector('figure').append(myCarInfo);
-};
-
-function AverageSpeedCalc() {
-    let averageSpeed = parseInt(myCar.averageSpeed),
-        distance = +document.querySelector('input').value,
-        nTime,
-        t;
-    if (distance === 0) {
-        alert('Идите пешком');
-    } else {
-        nTime = distance / averageSpeed;
-        t = nTime;
-
-        for (let i = 4; i <= t; t -= 4) {
-            nTime++;
+    function addNull(check) {
+        if (check < 10) {
+            return '0' + check;
         }
-        alert('You need to ride: ' + nTime.toFixed(2) + ' Hour(s).(minutes)');
+        return check;
     }
+
+    function insertTime(timeObj) {
+        let t = `Add at: ${addNull(timeObj.getHours())}:${addNull(timeObj.getMinutes())}:${addNull(timeObj.getSeconds())}  ${addNull(timeObj.getDate())}.${addNull(timeObj.getMonth() + 1)}.${timeObj.getFullYear()}`;
+        return t;
+    }
+
+    userDataObj.UserName = userNameValue;
+    userDataObj.UserMessage = userMessageValue;
+    outContent.innerHTML = '<div>' + userDataObj.UserName + '</div><div>' + insertTime(actionDate) + '</div> <div> ' + userDataObj.UserMessage + '</div></div>';
+    document.querySelector('.content').append(outContent);
 };
 
 //2
 
-function secondFunction() {
-    let firstNumbTop = +document.getElementById('f-n-top').value,
-        firstNumbBottom = +document.getElementById('f-n-bottom').value,
-        secNumbTop = +document.getElementById('s-n-top').value,
-        secNumbBottom = +document.getElementById('s-n-bottom').value,
-        actValue = document.getElementById('act-value').value;
+let nextQue = document.getElementById('nextQue'),
+    testEnd = document.getElementById('testEnd'),
+    testObj1 = document.forms[1].que1,
+    testObj2 = document.forms[1].que1,
+    result;
 
-    let firstObj = {
-        topNumber: firstNumbTop,
-        bottomNumber: firstNumbBottom,
-    };
-    let secondObj = {
-        topNumber: secNumbTop,
-        bottomNumber: secNumbBottom,
-    };
-    let resultObj = {
-        resultTop: null,
-        resultBottom: null,
-    };
-
-    if (actValue !== "+" && actValue !== "-" && actValue !== "*" && actValue !== "/") {
-        alert("Не верное математическое действие!1")
-    } else {
-        switch (actValue) {
-            case "+":
-                sum();
-                break;
-            case "-":
-                subtraction();
-                break;
-            case "*":
-                multiplication();
-                break;
-            case "/":
-                segmentation();
-                break;
-            default:
-                alert("vse poshlo ne tak");
-        }
-
-        function sum() {
-            if (firstObj.bottomNumber === secondObj.bottomNumber) {
-                resultObj.resultTop = firstObj.topNumber + secondObj.topNumber;
-                resultObj.resultBottom = firstObj.bottomNumber;
-            } else {
-                resultObj.resultTop = (firstObj.topNumber * secondObj.bottomNumber) + (secondObj.topNumber * firstObj.bottomNumber);
-                resultObj.resultBottom = firstObj.bottomNumber * secondObj.bottomNumber;
-            }
-        }
-
-        function subtraction() {
-            if (firstObj.bottomNumber === secondObj.bottomNumber) {
-                resultObj.resultTop = firstObj.topNumber - secondObj.topNumber;
-                resultObj.resultBottom = firstObj.bottomNumber;
-            } else {
-                resultObj.resultTop = (firstObj.topNumber * secondObj.bottomNumber) - (secondObj.topNumber * firstObj.bottomNumber);
-                resultObj.resultBottom = firstObj.bottomNumber * secondObj.bottomNumber;
-            }
-        }
-
-        function multiplication() {
-            resultObj.resultTop = firstObj.topNumber * secondObj.topNumber;
-            resultObj.resultBottom = firstObj.bottomNumber * secondObj.bottomNumber;
-        }
-
-        function segmentation() {
-            resultObj.resultTop = firstObj.topNumber * secondObj.bottomNumber;
-            resultObj.resultBottom = firstObj.bottomNumber * secondObj.topNumber;
-        }
-
-        if (resultObj.resultTop < 0) {
-            resultObj.resultTop = resultObj.resultTop * -1;
-            document.getElementById('result-int').innerText = "-";
-        }
-
-        if (resultObj.resultTop % resultObj.resultBottom === 0) {
-            let resultInt = resultObj.resultTop / resultObj.resultBottom;
-            resultObj.resultTop = 0;
-            resultObj.resultBottom = 0;
-            document.getElementById('result-int').innerText += resultInt;
-        }
-
-        document.getElementById('res-top').value = resultObj.resultTop;
-        document.getElementById('res-bottom').value = resultObj.resultBottom;
+nextQue.onclick = () => {
+    if (testObj1[0].checked || testObj1[1].checked) {
+        document.querySelector('.question1').style.display = 'none';
+        document.querySelector('.question2').style.display = 'grid';
+        result = document.querySelector("input[name = 'que1']:checked").value;
     }
-    ;
+}
+
+testEnd.onclick = () => {
+    if (testObj2[0].checked || testObj2[1].checked) {
+        result = (+result) + (+document.querySelector("input[name = 'que2']:checked").value);
+        document.querySelector('.question2').style.display = 'none';
+        document.createElement('div').innerText = result;
+        document.querySelector('.task2').innerHTML = ' <div class="centerPlz">Result:' + result + ' correct answers to 2 questions </div> ';
+    }
 };
 
-let currentTime = new Date,
-    timeButton = document.querySelector('.add-time'),
-    myTimeObj = {
-        hours: currentTime.getHours(),
-        minutes: currentTime.getMinutes(),
-        seconds: currentTime.getSeconds(),
-    };
+//3
+let showText = document.forms[2].mybut,
+    textAlignValue = document.forms[2].alignText,
+    fontStyleValue = document.forms[2].textStyle;
 
-timeButton.onclick = function () {
-    let addHour = +document.getElementById('hours').value,
-        addMinute = +document.getElementById('minutes').value,
-        addSecond = +document.getElementById('sec').value;
+let textAlignArr = ['left', 'right', 'justify'];
 
-    if (addSecond > 0 || addMinute > 0 || addHour > 0) {
+showText.onclick = function () {
 
-        addMinute = addMinute + Math.floor((myTimeObj.seconds + addSecond) / 60);
-        myTimeObj.seconds = (myTimeObj.seconds + addSecond) % 60;
-        myTimeObj.minutes += addMinute;
-        myTimeObj.hours += addHour;
+    let outputText = document.createElement('div');
+    outputText.style.textAlign = textAlignArr[textAlignValue.value];
+    outputText.style.border = '3px solid rgb(177, 177, 177)';
+    outputText.style.padding = '10px';
+    if (fontStyleValue[0].checked) outputText.style.fontWeight = document.querySelector('#bbold:checked').value;
+    if (fontStyleValue[1].checked) outputText.style.textDecoration = document.querySelector('#uunderline:checked').value;
+    if (fontStyleValue[2].checked) outputText.style.fontStyle = document.querySelector('#iitalic:checked').value;
+    outputText.innerHTML = '<div> Result:</div>' + '<div style="border: black 1px solid; min-height: 50px;">' + document.getElementById('someText').value + '</div>';
 
-        if (myTimeObj.minutes > 59) {
-            addHour = Math.floor(myTimeObj.minutes / 60);
-            myTimeObj.minutes %= 60;
-            myTimeObj.hours += addHour;
+    document.forms[2].append(outputText);
+};
+
+//4
+let books = document.querySelectorAll('.item'),
+    buttonAdd = document.querySelectorAll('.item button'),
+    buySomething = document.getElementById('buySomething');
+
+
+buttonAdd.forEach.call(buttonAdd, function (el) {
+    el.addEventListener('click', takeButtons);
+})
+
+function takeButtons() {
+    books.forEach.call(books, function (el2) {
+        el2.addEventListener('click', function takeBook() {
+
+            console.log(this.querySelector('.book-name').innerText);
+            document.getElementById('outBookName').value = this.querySelector('.book-name').innerText;
+            document.querySelector("input[name='quantity']").value = 1;
+
+        }, {once: true});
+    });
+};
+buySomething.addEventListener('click', function (e) {
+    e.preventDefault();
+    let customModal = document.createElement('div'),
+        modalText = document.createElement('div'),
+        userName = document.forms[3].name,
+        userSelectedBook = document.forms[3].outBookName,
+        userAddress = document.forms[3].address,
+        userDateDelivery = document.forms[3].date;
+
+    customModal.classList.add('modalFromJs');
+    modalText.classList.add('modal-text');
+    customModal.append(modalText);
+    document.body.append(customModal);
+    //  document.html.style.overflowY = 'hidden';    почему не работает)
+    document.body.style.position = 'relative';
+    modalText.innerHTML = `<div>${userName.value} thank for order! </div> <div> Book " ${userSelectedBook.value} " will be delivered on ${userDateDelivery.value}  to ${userAddress.value} </div>  `;
+
+});
+
+//5
+
+let presentStudents = [[[], [], []], [[], [], []]],
+    groupTakeButton = document.getElementById('group-take'),
+    saveDataButton = document.getElementById('saveData'),
+    refreshInput = document.querySelectorAll('.task5-form > select, ');
+
+console.log(refreshInput)
+
+let selectGroup = +document.getElementById("groups").value,
+    selectLesson = +document.getElementById("lessons").value,
+    studentData = document.querySelectorAll(".out-cell"),
+    topicInfo = document.getElementById('topic-info-out');
+
+groupTakeButton.onclick = () => {
+
+
+    if (presentStudents[selectGroup][selectLesson].length > 0) {
+        saveDataButton.style.display = 'none';
+        topicInfo.innerHTML = presentStudents[selectGroup][selectLesson][0];
+
+        console.log(presentStudents[selectGroup][selectLesson]);
+        let k = 0;
+
+        for (let i = 1; presentStudents[selectGroup][selectLesson].length > i; i++) {
+            studentData[k].innerHTML = ` ${presentStudents[selectGroup][selectLesson][i]}`;
+            k++;
         }
-        if (myTimeObj.hours >= 24) {
-            myTimeObj.hours = 0;
-        }
+    }else{
+        let returnTopic = document.createElement('input'),
+            returnCheckbox =document.createElement('input');
+        returnTopic.id = 'topic-info-in';
+        returnTopic.type = 'text';
+        //returnCheckbox.id
+        topicInfo.innerHTML = ' ';
+        topicInfo.append(returnTopic);
+        saveDataButton.style.display = 'block';
+
     }
 }
 
-function addNull(check) {
-    if (check < 10) {
-        return '0' + check;
-    }
-    return check;
+saveDataButton.onclick = () =>{
+    console.log(selectGroup)
 }
 
-setInterval(tick, 1000);
 
-function tick() {
 
-    if (myTimeObj.seconds < 60) myTimeObj.seconds++;
-    if (myTimeObj.seconds >= 60) {
-        myTimeObj.seconds = 0;
-        myTimeObj.minutes++;
-        if (myTimeObj.minutes >= 60) {
-            myTimeObj.minutes = 0;
-            myTimeObj.hours++;
-            if (myTimeObj.hours >= 24) {
-                myTimeObj.hours = 0;
-            }
-        }
-    }
-    document.getElementById('clock').innerText = `${addNull(myTimeObj.hours)} : ${addNull(myTimeObj.minutes)} : ${addNull(myTimeObj.seconds)}`;
-}
 
 
