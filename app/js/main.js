@@ -141,19 +141,22 @@ function f5_select() {
     selectLesson = +document.getElementById("lessons").value;
 }
 
+
 refreshSelect.forEach.call(refreshSelect, function (el) {
     el.addEventListener('mouseenter', f5_select);
 });
-
+function insertData(){
+    saveDataButton.style.display = 'none';
+    outTopicInfo.innerText = presentStudents[selectGroup][selectLesson][0];
+    let k = 0;
+    for (let i = 1; presentStudents[selectGroup][selectLesson].length > i; i++) {
+        outStudentData[k].innerHTML = ` ${presentStudents[selectGroup][selectLesson][i]}`;
+        k++;
+    }
+}
 groupTakeButton.onclick = () => {
     if (presentStudents[selectGroup][selectLesson].length > 0) {
-        saveDataButton.style.display = 'none';
-        outTopicInfo.innerText = presentStudents[selectGroup][selectLesson][0];
-        let k = 0;
-        for (let i = 1; presentStudents[selectGroup][selectLesson].length > i; i++) {
-            outStudentData[k].innerHTML = ` ${presentStudents[selectGroup][selectLesson][i]}`;
-            k++;
-        }
+       insertData();
     } else {
         let returnTopic = document.createElement('input');
         returnTopic.id = 'topic-info-in';
@@ -174,11 +177,14 @@ saveDataButton.onclick = () => {
         studentStatus.forEach(function (p) {
 
             if (p.checked === false) {
-                presentStudents[selectGroup][selectLesson].push('Absent!');
+                presentStudents[selectGroup][selectLesson].push(' - ');
             } else {
                 presentStudents[selectGroup][selectLesson].push('Present!');
             }
         });
+    }
+    if (presentStudents[selectGroup][selectLesson].length > 0) {
+        insertData();
     }
 };
 
