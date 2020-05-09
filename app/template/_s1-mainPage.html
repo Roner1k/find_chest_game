@@ -1,182 +1,95 @@
-<div class="task1">
-    <div class="content">
-
-    </div>
-    <form>
-        <h5>Add new message!</h5>
-        <label>Your name</label>
-        <input type="text" name="name" placeholder="Name">
-        <br>
-        <label> Your message</label>
-        <textarea type="text" name="userText" placeholder="sampletext"></textarea>
-        <br>
-        <button type="button">Send!</button>
-    </form>
+<div id="task1">
+    <h3>Random number: </h3>
+    <div class="rNumber"></div>
+    <button>get number</button>
 </div>
 
-<form class="task2">
-
-    <div class="question1">
-        <div class="que-name"><b>1)</b> How many letters are in the world "Hello"?</div>
-
-        <input type="radio" id="que1-1" value="1" name="que1">
-        <label for="que1-1">5</label>
-
-        <input type="radio" id="que1-2" value="0" name="que1">
-        <label for="que1-2">2</label>
-
-        <button type="button" id="nextQue">NEXT!</button>
-    </div>
-
-    <div class="question2">
-        <div class="que-name"><b>2)</b> How many letters are in the world "Hello"?</div>
-        <input type="radio" id="que2-1" value="1" name="que2">
-        <label for="que2-1">4</label>
-
-        <input type="radio" id="que2-2" value="0" name="que2">
-        <label for="que2-2">5</label>
-
-        <button type="button" id="testEnd">Finish!</button>
-    </div>
-</form>
-
-<form class="task3">
-    <div class="text-settings">
-       <span> <input type="checkbox" value="bold" name="textStyle" id="bbold">
-        <label for="bbold">Bold</label></span>
-
-        <span> <input type="checkbox" value="underline" name="textStyle" id="uunderline">
-        <label for="uunderline">Underline</label></span>
-
-        <span> <input type="checkbox" value="italic" name="textStyle" id="iitalic">
-        <label for="iitalic">Italic</label></span>
-
-        <span> <input type="radio" name="alignText" value="0" id="lleft" checked>
-        <label for="lleft">Left</label></span>
-
-        <span> <input type="radio" name="alignText" value="1" id="rright">
-        <label for="rright">Right</label></span>
-
-        <span> <input type="radio" name="alignText" value="2" id="jjustify">
-        <label for="jjustify">Justify</label></span>
-    </div>
-    <textarea name="someText" id="someText" placeholder="input text here"></textarea>
-    <button type="button" name="mybut">Show text!</button>
-</form>
-
-<h3 style="padding: 25px">А это магазин!</h3>
-
-<div class="market">
-    <div class="books-wrap">
-
-        <div class="item">
-            <img src="img/1.jfif" alt="">
-            <div class="book-name">Head First Java by Kathy Sierra & Bert Bates
-                <div>Author – Kathy Sierra & Bert Bates</div>
-            </div>
-            <div class="price">16$</div>
-            <button>Select</button>
-        </div>
-
-        <div class="item">
-            <img src="img/2.jfif" alt="">
-            <div class="book-name">Beginning Programming with Java For Dummies
-                <div>Author – Burry Burd, PhD</div>
-            </div>
-            <div class="price">20$</div>
-            <button>Select</button>
-        </div>
-
-        <div class="item">
-            <img src="img/3.jfif" alt="">
-            <div class="book-name"> Java: Programming Basics for Absolute Beginners by Nathan Clark
-                <div>Author – Nathan Clark</div>
-            </div>
-            <div class="price">25$</div>
-            <button>Select</button>
-        </div>
-    </div>
-
-    <form action="" class="task4">
-        <div>
-            <label>Book:</label>
-            <textarea id="outBookName" disabled></textarea></div>
-
-        <div>
-            <label>Quantity:</label>
-            <input type="text" name="quantity"></div>
-
-        <div>
-            <label for="">Name:</label>
-            <input type="text" name="name"></div>
-
-        <div>
-            <label for="">Delivery address:</label>
-            <textarea name="address" id="address"></textarea></div>
-
-        <div><label for="">Delivery date:</label>
-            <input type="date" name="date"></div>
-
-        <div><label for="">Comment:</label>
-            <textarea name="" id=""></textarea></div>
-
-        <button id="buySomething">BUY!</button>
-    </form>
+<div id="task2">
+    <a href="cursor.html">
+        Следим за мышкой
+    </a>
 </div>
 
-<div class="task5">
-    <form class="task5-form">
-        <label for="groups">Group:</label>
-        <select name="groups" id="groups">
-            <option value="0">Group 1</option>
-            <option value="1">Group 2</option>
-        </select>
+<div id="task3">
+    <button>Hide / show text</button>
+    <div class="youSeeMe"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At distinctio eos nemo velit! Culpa cupiditate
+        doloremque ipsam itaque laboriosam molestiae nesciunt nisi totam? Commodi dicta facilis maiores neque, nostrum
+        quo rem totam vero. Dolorem natus, sequi? Aspernatur cupiditate deleniti, doloribus esse iure molestias quidem,
+        sequi, sunt totam veniam vero voluptates?
+    </div>
 
-        <label for="lessons">Lesson:</label>
-        <select name="lessons" id="lessons">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
+</div>
 
-        <button type="button" id="group-take">Select</button>
-    </form>
-    <hr>
+<div id="task4">
+    <section class="tabs-wrap">
+        <nav class="tabs-wrap__buttons">
+            <button class="activeButton">HTML</button>
+            <button>CSS</button>
+            <button>JS</button>
+        </nav>
 
-    <div class="students-info">
-        <div class="topic-wrap">
-            Topic:
-            <div class="topic-info-out" id="topic-info-out">
-                <input id="topic-info-in" type="text">
-            </div>
+        <div class="activateMyDiv">
+            <p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed
+                in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting
+                languages such as JavaScript.
+            </p>
+            <p> Web browsers receive HTML documents from a web server or from local storage and render the documents
+                into multimedia web pages. HTML describes the structure of a web page semantically and originally
+                included cues for the appearance of the document.
+            </p>
         </div>
+        <div>
+            <p> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a
+                document written in a markup language like HTML.[1] CSS is a cornerstone technology of the World Wide
+                Web, alongside HTML and JavaScript.[2]
+            </p>
+            <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and
+                fonts.[3] This separation can improve content accessibility, provide more flexibility and control in the
+                specification of presentation characteristics, enable multiple web pages to share formatting by
+                specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the
+                structural content.
+            </p>
+        </div>
+        <div>
+            <p>JavaScript (/ˈdʒɑːvəˌskrɪpt/),[6] often abbreviated as JS, is a programming language that conforms to the
+                ECMAScript specification.[7] JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+                It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class
+                functions.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi consequatur cumque
+                cupiditate distinctio eius eos error est eum inventore magnam nam nobis placeat reprehenderit sapiente,
+                ullam voluptas voluptate voluptatibus.
+            </p>
+        </div>
+    </section>
+</div>
 
-        <table>
-            <thead>
-            <tr>
-                <td>Name</td>
-                <td>Is present</td>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-                <td>Student1</td>
-                <td class="out-cell" id="out-one">
-                    <input type="checkbox" ></td>
-            </tr>
-            <tr>
-                <td>Student2</td>
-                <td class="out-cell" id="out-two">
-                    <input type="checkbox" ></td>
-            </tr>
-            <tr>
-                <td>Student3</td>
-                <td class="out-cell" id="out-three">
-                    <input type="checkbox" ></td>
-            </tr>
-            </tbody>
-        </table>
-        <button type="button" id="saveData" name="saveData">SAVE!</button>
+<div id="task5">
+    <div class="news">
+        <div>Lorem ipsum dolor sit amet.</div>
+        <button>&#10006; [remove]</button>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque facilis id natus perspiciatis sequi. A
+            aperiam asperiores atque, beatae corporis dicta fugit impedit minus nam neque nesciunt nostrum obcaecati,
+            quasi, rerum sint tempora vitae. Consequatur illo officiis omnis quam quibusdam!
+        </div>
+    </div>
+    <div class="news">
+        <div>Lorem ipsum dolor sit amet.</div>
+        <button>&#10006; [remove]</button>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque facilis id natus perspiciatis sequi. A
+            aperiam asperiores atque, beatae corporis dicta fugit impedit minus nam neque nesciunt nostrum obcaecati,
+            quasi, rerum sint tempora vitae. Consequatur illo officiis omnis quam quibusdam!
+        </div>
+    </div>
+    <div class="news">
+        <div>Lorem ipsum dolor sit amet.</div>
+        <button>&#10006; [remove]</button>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque facilis id natus perspiciatis sequi. A
+            aperiam asperiores atque, beatae corporis dicta fugit impedit minus nam neque nesciunt nostrum obcaecati,
+            quasi, rerum sint tempora vitae. Consequatur illo officiis omnis quam quibusdam!
+        </div>
     </div>
 </div>
+ <div id="task6">
+     <progress value="0" max="100"></progress>
+     <button >Add 5%</button>
+ </div>
