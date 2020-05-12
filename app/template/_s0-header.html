@@ -1,6 +1,53 @@
-<div class="task2cont">
-    <h3>Следим за курсором!</h3>
-    <div id="cursor"></div>
-    <div id="buttons"></div>
+<header>
+    <div class="site-header-mini-nav">
+        <a href="">Socials</a>
+        <a href="">Socials</a>
+        <a href="">Socials</a>
+    </div>
+    <h1>Сайт где люди фильмы находят</h1>
+</header>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a href="">lorem2</a></li>
+                        <li><a href="">Фильмы</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+        <div class="col-sm-10">
+            <div class="film-content">
+                <h2>Все что нужно, это название!</h2>
+                <form action="">
+                    <label for="filmName">
+                        Поиск фильмов:
+                    </label>
+                    <input type="text" id="filmName" value="fury">
+                    <button>найти!</button>
+                </form>
+                <div id="resultMessage">
+                    <div class="myErrors server"> Ошибка сервера!</div>
+                    <div class="myErrors search">Результат не найден!</div>
+                    <div id="someResponse"></div>
+
+                    <div class="pagination">
+                        <div class="find-results">нашел: 1006 фильмов</div>
+                        <nav>
+                            <button id="prevPage" class="disabled-page">Previous</button>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <button id="nextPage">Next</button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
