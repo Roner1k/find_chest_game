@@ -9,41 +9,44 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2">
-            <aside>
-                <nav>
-                    <ul>
-                        <li><a href="">lorem2</a></li>
-                        <li><a href="">Фильмы</a></li>
-                        <li><a href="">Контакты</a></li>
-                    </ul>
-                </nav>
-            </aside>
-        </div>
-        <div class="col-sm-10">
+<!--        <div class="col-sm-2">-->
+<!--            <aside>-->
+<!--                <nav>-->
+<!--                    <ul>-->
+<!--                        <li><a href="">lorem2</a></li>-->
+<!--                        <li><a href="">Фильмы</a></li>-->
+<!--                        <li><a href="">Контакты</a></li>-->
+<!--                    </ul>-->
+<!--                </nav>-->
+<!--            </aside>-->
+<!--        </div>-->
+        <div class="col-sm-12">
             <div class="film-content">
                 <h2>Все что нужно, это название!</h2>
                 <form action="">
                     <label for="filmName">
                         Поиск фильмов:
                     </label>
-                    <input type="text" id="filmName" value="fury">
+                    <input type="text" id="filmName" placeholder="Только на английском!">
                     <button>найти!</button>
                 </form>
                 <div id="resultMessage">
+                    <div class="total-results">
+                    </div>
                     <div class="myErrors server"> Ошибка сервера!</div>
-                    <div class="myErrors search">Результат не найден!</div>
+                    <div class="myErrors search">Результат не найден! <span>Films name supports only on <strong>ENGLISH</strong></span> </div>
                     <div id="someResponse"></div>
 
                     <div class="pagination">
-                        <div class="find-results">нашел: 1006 фильмов</div>
                         <nav>
-                            <button id="prevPage" class="disabled-page">Previous</button>
-                            <span>1</span>
+<!--                            <button id="prevPage" class="disabled-page">Previous</button>-->
+                            <span class="active-page">1</span>
                             <span>2</span>
                             <span>3</span>
-                            <button id="nextPage">Next</button>
+<!--                            <button id="nextPage">Next</button>-->
                         </nav>
+                        <div class="quantity-pages">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,3 +54,9 @@
     </div>
 </div>
 
+<div class="overlay">
+    <div id="film-description">
+        <div class="close-me">&#10006;</div>
+
+    </div>
+</div>
