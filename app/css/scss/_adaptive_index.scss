@@ -10,6 +10,11 @@ $nofhd: 1601px;
     @content;
   }
 }
+@mixin pfhd {
+  @media (min-width: #{$nofhd}) {
+    @content;
+  }
+}
 
 @mixin biggerdesktop {
   @media (min-width: #{$biggerdesktop-width + 1}) {
@@ -18,7 +23,7 @@ $nofhd: 1601px;
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop-width + 1}) {
+  @media (max-width: #{$biggerdesktop-width + 1}) {
     @content;
   }
 }

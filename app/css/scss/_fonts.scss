@@ -1,72 +1,55 @@
 @font-face {
-  font-family: 'NeoSansPro-Light';
-  src: url('../fonts/neo_sans/NeoSansPro-Light.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Light.svg#NeoSansPro-Light') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Light.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Light.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Light.woff2') format('woff2');
+  font-family: 'Lato-Medium';
+  src: url('../fonts/Lato/Lato-Medium/Lato-Medium.eot');
+  src: url('../fonts/Lato/Lato-Medium/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato/Lato-Medium/Lato-Medium.svg#Lato-Medium') format('svg'),
+  url('../fonts/Lato/Lato-Medium/Lato-Medium.ttf') format('truetype'),
+  url('../fonts/Lato/Lato-Medium/Lato-Medium.woff') format('woff'),
+  url('../fonts/Lato/Lato-Medium/Lato-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NeoSansPro-Ultra';
-  src: url('../fonts/neo_sans/NeoSansPro-Ultra.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Ultra.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.svg#NeoSansPro-Ultra') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Ultra.woff2') format('woff2');
+  font-family: 'Lato-Black';
+  src: url('../fonts/Lato/Lato-Black/Lato-Black.eot');
+  src: url('../fonts/Lato/Lato-Black/Lato-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato/Lato-Black/Lato-Black.svg#Lato-Black/Lato-Black') format('svg'),
+  url('../fonts/Lato/Lato-Black/Lato-Black.ttf') format('truetype'),
+  url('../fonts/Lato/Lato-Black/Lato-Black.woff') format('woff'),
+  url('../fonts/Lato/Lato-Black/Lato-Black.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NeoSansPro-Bold';
-  src: url('../fonts/neo_sans/NeoSansPro-Bold.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.svg#NeoSansPro-Bold') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Bold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NeoSansPro-Regular';
-  src: url('../fonts/neo_sans/NeoSansPro-Regular.eot');
-  src: url('../fonts/neo_sans/NeoSansPro-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.svg#NeoSansPro-Regular') format('svg'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.ttf') format('truetype'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.woff') format('woff'),
-  url('../fonts/neo_sans/NeoSansPro-Regular.woff2') format('woff2');
+  font-family: 'Lato-SemiBold';
+  src: url('../fonts/Lato/Lato-SemiBold/Lato-SemiBold.eot');
+  src: url('../fonts/Lato/Lato-SemiBold/Lato-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato/Lato-SemiBold/Lato-SemiBold.svg#Lato-SemiBold/Lato-SemiBold') format('svg'),
+  url('../fonts/Lato/Lato-SemiBold/Lato-SemiBold.ttf') format('truetype'),
+  url('../fonts/Lato/Lato-SemiBold/Lato-SemiBold.woff') format('woff'),
+  url('../fonts/Lato/Lato-SemiBold/Lato-SemiBold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 
-@mixin  ms_100($fsize){
-  font-family: 'NeoSansPro-Light', Arial, Tahoma, sans-serif;
+@mixin  ms_500($fsize){
+  font-family: 'Lato-Medium', Arial, Tahoma, sans-serif;
   font-weight: normal;
   font-size: $fsize;
 
 }
-@mixin ms_300($fsize){
-  font-family: 'NeoSansPro-Regular', Arial, Tahoma, sans-serif;
-  font-weight: normal;
-  font-size: $fsize;
-}
-
-@mixin ms_700($fsize){
-  font-family: 'NeoSansPro-Bold', Arial, Tahoma, sans-serif;
+@mixin ms_600($fsize){
+  font-family: 'Lato-Medium', Arial, Tahoma, sans-serif;
   font-weight: normal;
   font-size: $fsize;
 }
 
 @mixin ms_900($fsize){
-  font-family: 'NeoSansPro-Ultra', Arial, Tahoma, sans-serif;
-  font-weight: normal;
+  font-family: 'Lato-Black', Arial, Tahoma, sans-serif;
+  font-weight: bolder;
   font-size: $fsize;
 }
+
