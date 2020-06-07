@@ -6,6 +6,7 @@
 
 html {
   overflow-x: hidden;
+  overflow-y: initial;
 }
 
 html,
@@ -20,12 +21,13 @@ $blue-text: #0382C3;
 body {
   background: #fff;
   color: $text_color;
-  font-family:  Lato-Medium, Arial, sans-serif;
+  font-family:  Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-  //font-smoothing: antialised;
+
+  font-smoothing: antialised;
 }
 
 div, p, input, button, form, a {

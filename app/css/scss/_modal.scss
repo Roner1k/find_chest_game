@@ -1,0 +1,66 @@
+.consultation-modal{
+	.modal{
+		&-content{
+			border-radius: 10px;
+		}
+		&-header{
+			border: none;
+			h2{
+				color: $theme_red;
+				text-align: center;
+				width: 100%;
+			}
+		}
+		&-body{
+			padding: 20px;
+			form{
+				text-align: center;
+				input{
+					width: 100%;
+					height: 50px;
+					border: 1px solid $theme_grafit;
+					padding-left: 20px;
+					&[type="file"]{
+						height: 15px;
+					}
+				}
+				label{
+					cursor: pointer;
+					height: 50px;
+					width: 100%;
+					border: 1px solid $theme_grafit;
+					padding-top: 10px;
+					span.necessarily{
+						@media screen and (max-width: 430px) {
+							display: block;
+						}
+					}
+					@media screen and (max-width: 430px) {
+						height: 75px;
+					}
+				}
+				textarea{
+					margin-top: 20px;
+					resize: none;
+					width: 100%;
+					height: 200px;
+					padding: 20px;
+					outline: none;
+				}
+				.super-btn{
+					margin-top: 30px;
+					.btn-body{
+						margin-left: 0;
+						border: none;
+						outline: none;
+						line-height: 43px;
+						padding: 0;
+						width: 290px;
+						text-align: center;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

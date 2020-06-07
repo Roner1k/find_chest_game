@@ -1,0 +1,62 @@
+
+h1 {
+  width: 777px;
+  margin: 40px auto 50px;
+  text-align: center;
+  font-weight: 600;
+
+  @include phone {
+    font-size: 3rem;
+    width: 100%;
+  }
+  @include nedophone {
+    font-size: 2rem;
+  }
+}
+
+.my-profile {
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  form {
+    max-width: 80%;
+    margin: 0 auto;
+
+    div {
+      padding: 15px;
+      border: black solid 1px;
+      border-bottom: none;
+
+      &:last-child {
+        border-bottom: black solid 1px;
+        border-top: none;
+      }
+
+      label {
+        display: block;
+
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        border: black solid 1px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      select {
+        border-radius: 5px;
+      }
+      button{
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        border: black solid 1px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
