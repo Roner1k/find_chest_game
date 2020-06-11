@@ -4,7 +4,8 @@ let searchButton = document.querySelector('.film-content form button'),
     changePage = document.querySelectorAll(".pagination span"),
     filmNameIn,
     totalPages,
-    notPair;
+    notPair,
+    searchHistory = {};
 
 if (!!searchButton) {
     searchButton.onclick = (e) => {
@@ -17,6 +18,11 @@ if (!!searchButton) {
             if (parseInt(spanV.innerHTML) === 1) spanV.classList.add('active-page');
             else spanV.classList.remove('active-page');
         })
+        if (!!takeCookie && filmNameIn !== '') {
+            let newDate = new Date();
+            searchHistory[filmNameIn] = newDate.toLocaleString()
+            localStorage.setItem(`${localStorage.getItem('userName')}$searchData`, JSON.stringify(searchHistory))
+        }
     }
 }
 
@@ -212,21 +218,35 @@ submitButton.onclick = function () {
 
     checkInputs();
 
+//если 4 бала есть , отправляем куки
     function checkInputs() {
+
         let c = 0;
+
         if (reName.test(userName) === false) {
             addError('user-name', 'wrong name <br>(одно слово, без цифр, max 14)')
 
-        } else c++;
+        } else {
+            c++;
+            localStorage.setItem('userName', userName)
+        }
+
         if (reEmail.test(userEmail) === false) {
             addError('e-mail', 'неправильный email')
 
-        } else c++;
+        } else {
+            c++;
+            localStorage.setItem('userEmail', userEmail)
+        }
+
         if (userPass !== document.getElementById('password-сonf').value) {
             addError('password', 'пароли не совпадают')
             addError('password-сonf', '')
 
-        } else c++;
+        } else {
+            c++;
+            localStorage.setItem('userPass', userPass)
+        }
         if (rePass.test(userPass) === false) {
             addError('password', 'Пароль слишком легкий')
             addError('password-сonf', '')
@@ -234,7 +254,12 @@ submitButton.onclick = function () {
         } else c++;
 
         if (c === 4) {
-            document.cookie = `${userName}=${userEmail}${userPass}; expires = Thu, 01 Jan 2021 00:00:00 GMT`;
+// куки на 7 дней
+            let expiresDate = Date.now();
+            expiresDate = Math.ceil((+expiresDate / 1000) + 615600)
+            expiresDate = new Date(expiresDate * 1000);
+
+            document.cookie = `${userName}=${userEmail}${userPass}; expires = ${expiresDate.toUTCString()}`;
             document.querySelector('.registrationF').style.display = 'none';
             document.querySelector('.user-auth span').style.height = '28px';
             document.location.reload(true)
@@ -260,10 +285,29 @@ let takeCookie = document.cookie,
     reUser = /(^.*)=/mg;
 
 if (!!takeCookie) {
+
     let accountName = takeCookie.match(reUser)[0];
     accountName = accountName.substring(0, accountName.length - 1)
-    document.querySelector('.user-auth span').innerHTML = `<div class="hello-user"> <a href="cabinet.html"> <span>Привет,</span> ${accountName}</a> <button id="log-out">Выйти!</button> </div> `;
+    document.querySelector('.user-auth span').innerHTML = `<div class="hello-user">
+ <a href="cabinet.html"> <span>Привет,</span> ${accountName}</a>
+  <a href="cabinet.html"> <span>Мой кабинет</span> </a>
+  <a href="cabinet.html"> <span>История поисков</span> </a>
+  <a id="log-out">Выйти!</a> </div> `;
+
     goOut = document.getElementById('log-out');
+//есть куки и мы в кабинете!
+    if (window.location.toString().indexOf('cabinet') > 0) {
+        insertUserData();
+        insertUserSearch();
+
+        document.getElementById('input-user-name').innerText = accountName;
+        document.getElementById('your-mail').value = localStorage.getItem('userEmail');
+        document.getElementById('your-pass').value = localStorage.getItem('userPass');
+    }
+
+
+} else if (window.location.toString().indexOf('cabinet.html') > 0) {
+    window.location.assign('index.html');
 }
 
 if (!!goOut) {
@@ -276,26 +320,109 @@ if (!!goOut) {
             let name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
             document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
         }
+        localStorage.clear()
         document.location.reload(true)
     })
 }
-
-//window.location.assign('https://google.com');
-// if (isNaN(accountName)) {
-//
-//
-// }
-
-
-function getCookie(name) {
-    let matches = document.cookie.match(new RegExp(
-        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        )),
-        accountName = document.cookie.match(new RegExp(
-            "(?:^|; )" + name.replace(/^\w*=/)
-        ));
-    console.log(accountName)
-    return matches ? decodeURIComponent(matches[1]) : undefined;
+if (!!document.getElementById('save-profile')) {
+    document.getElementById('save-profile').addEventListener('click', (e) => {
+        e.preventDefault();
+        userInfoDetails();
+    })
 }
+let ttt = localStorage.getItem(`${localStorage.getItem('userName')}$info`);
+
+function userInfoDetails() {
+    let userForm = document.forms[1],
+        checkInputs = document.querySelectorAll('#more-user-info input'),
+        userInfo = {};
+    userInfo.firstName = userForm.first$name.value,
+        userInfo.lastName = userForm.last$name.value,
+        userInfo.birth = userForm.birth.value,
+        userInfo.gender = userForm.gender.value,
+        userInfo.phone = userForm.phone.value,
+        userInfo.skype = userForm.skyp.value;
+    console.log(userForm.skyp.value, userInfo.skype)
+    if (userInfo.skype === undefined) {
+        userInfo.skype = '-';
+
+    }
+    let c = 0;
+
+    checkInputs.forEach((item) => {
+
+        if (item.value == '' && item.name !== 'skyp') {
+            item.style.border = '1px solid red';
+            c++;
+        } else {
+            item.style.border = '1px solid black';
+            c--;
+        }
+    })
+    if (c === -5) {
+
+        localStorage.setItem(`${localStorage.getItem('userName')}$info`, JSON.stringify(userInfo))
+        insertUserData();
+    }
+}
+
+//запись в локал + создание обьекта из локалки
+function insertUserData(stope) {
+    let insteadForm = document.querySelector('.after-save-wrap'),
+        userInfoStor = localStorage.getItem(`${localStorage.getItem('userName')}$info`);
+
+    if (!!userInfoStor) {
+
+        userInfoStor = JSON.parse(userInfoStor);
+        if (stope === 0) {
+            return userInfoStor;
+        }
+        let insertInfo = '<div class="insert-info"> ';
+        for (let key in userInfoStor) {
+            insertInfo += `<div> <span>${key}:</span> <span>${userInfoStor[key]}</span> </div>`
+        }
+        insteadForm.style.display = 'block';
+        document.querySelector('#more-user-info').style.display = 'none';
+        insertInfo += '<button id="edit-data" onclick="editUserData()" >Редактировать</button> </div> '
+        insteadForm.innerHTML = insertInfo;
+    }
+}
+
+
+function insertUserSearch() {
+    let userSearchStor = localStorage.getItem(`${localStorage.getItem('userName')}$searchData`);
+
+    if (!!userSearchStor) {
+        userSearchStor = JSON.parse(userSearchStor);
+
+        let insertSearches = '<div class="insert-searches"> ';
+        for (let key in userSearchStor) {
+            insertSearches += `<div> <span>${key}:</span> <span>${userSearchStor[key]}</span> </div>`
+        }
+        insertSearches += '</div> '
+        document.querySelector('.search-results') .innerHTML = insertSearches;
+    }
+
+}
+
+if (!!document.querySelector('#edit-data')) {
+    document.querySelector('#edit-data').onclick = () => {
+        editUserData()
+    }
+}
+
+function editUserData() {
+    document.querySelector('.after-save-wrap').style.display = 'none';
+    document.querySelector('#more-user-info').style.display = 'block';
+    let tempObj = insertUserData(0),
+        userForm = document.forms[1];
+    userForm.first$name.value = tempObj.firstName ,
+        userForm.last$name.value = tempObj.lastName,
+        userForm.birth.value = tempObj.birth,
+        userForm.gender.value = tempObj.gender,
+        userForm.phone.value = tempObj.phone,
+        userForm.skyp.value = tempObj.skyp;
+}
+
 
 

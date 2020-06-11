@@ -13,17 +13,19 @@
 }
 
 header {
+  width: 100%;
+  position: absolute;
 
   .site-header-mini-nav {
     display: flex;
-    height: 60px;
+    height: 100%;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 15px;
     position: relative;
 
-    .main-page {
+    .index-page {
       a {
         @extend %link-a;
 
@@ -38,17 +40,31 @@ header {
     .user-auth {
       display: flex;
       flex-flow: column nowrap;
-      //justify-content: center;
-      // align-items: flex-end;
 
       .hello-user {
         max-height: 30px;
         transition: all .2s ease-in-out;
 
         &:hover {
-          max-height: 60px;
+          max-height: 140px;
           transition: all .2s ease-in-out;
 
+        }
+
+        a {
+          @extend %link-a;
+          text-transform: initial;
+          line-height: 24px;
+          letter-spacing: 0.055em;border: 1px transparent;
+
+          span {
+            font-size: 0.8rem;
+          }
+
+          &:hover {
+            border: 1px solid black;
+            transform: scale(1.1);
+          }
         }
       }
 
@@ -71,37 +87,22 @@ header {
         cursor: pointer;
         position: relative;
 
-        button {
-          background-color: #0b93d5;
-          display: block;
-          max-height: 25px;
-          text-align: center;
-          width: 100%;
-          color: white;
-          font-size: 0.9rem;
-          text-decoration: underline;
-          &:hover{
-            filter: alpha(25%);
-          }
-        }
+        //a#log-out {
+        //   background-color: #0b93d5;
+        //   display: block;
+        //   max-height: 25px;
+        //   text-align: center;
+        //   width: 100%;
+        //   color: white;
+        //   font-size: 0.9rem;
+        //   &:hover{
+        //     filter: alpha(25%);
+        //   }
+        // }
 
         &:hover {
           transform: scale(1.05);
           box-shadow: #0b3e6f 1px 1px 6px;
-        }
-
-
-        //&:hover button {
-        //  bottom: -150px;
-        //}
-
-        a {
-          @extend %link-a;
-          text-transform: initial;
-          letter-spacing: 0.055em;
-          span {
-            font-size: 0.8rem;
-          }
         }
       }
 
