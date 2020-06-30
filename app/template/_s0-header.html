@@ -1,21 +1,24 @@
-<div class="test1">
-    <h2>тест</h2>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="game-wrap">
+                <h1>Найди клад</h1>
+                <div id="game-map">
+                    <div id="message">Начнем Игру!</div>
+                </div>
+                <hr>
+                <div class="stats">
+                    <div id="hints">Уровень 1 50 попыток</div>
+                    <div class="attempts">
+                        Попытки:
+                        <span id="att-count">0</span> /
+                        <span id="max-count">50</span>
+                    </div>
+                    <div id="money">0 Гривень</div>
+                    <button type="button">Заново!</button>
+                </div>
+            </div>
 
-    <label for="name">Имя:</label>
-    <input type="text" id="name" placeholder="Ваше имя">
-
-    <label for="age">Возраст:</label>
-    <input type="number" id="age" placeholder="1-100">
-
-    <label for="myTest">Вы любите выпить?</label>
-    <select name="myTest" id="myTest">
-        <option value="true">!нет</option>
-        <option value="false">нет</option>
-    </select>
-
-    <input type="button" value="result">
+        </div>
+    </div>
 </div>
-<div class="result">
-    <div class="result_text"></div>
-</div>
-

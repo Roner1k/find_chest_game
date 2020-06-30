@@ -1,27 +1,102 @@
-.test1 {
-  padding: 25px;
+.game-wrap {
+  font-family: Segoe UI, Helvetica, Arial, sans-serif;
 
-  h2 {
+  h1 {
     text-align: center;
+    text-decoration: underline;
+    color: rgba(11, 46, 19, 0.8);
+    font-family: Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: 3rem;
   }
 
-  label {
-    display: block;
-  }
+  #game-map {
+    width: 500px;
+    cursor: pointer;
+    height: 500px;
+    box-shadow: black 1px 1px 5px;
+    margin: 25px auto;
+    background-image: url("/img/map1.jpg");
+    background-size: cover;
+    transition: all .2s ease-in-out;
+    position: relative;
+    z-index: 1;
 
-  input {
-    border: black 1px solid;
-    margin-bottom: 15px;
+    #message {
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      font-size: 26px;
+      color: white;
+      font-weight: 700;
+      letter-spacing: 0.095em;
+      text-shadow: 1px 1px 2px white;
+      border: 2px solid gray;
+      box-shadow: black 1px 1px 5px;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 50px;
+      line-height: 45px;
+      background-color: rgba(11, 46, 19, 0.78);
+      user-select: none;
+      transition: all .2s ease-in-out;
 
-    &[type='button'] {
-      font-weight: 900;
-      display: block;
-      width: 110px;
-      margin: 15px 0;
+      &:hover {
+        width: 98%;
+        height: 55px;
+        line-height: 48px;
+      }
+    }
+
+    &:before {
+      z-index: 2;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/img/mgrid.png");
+      background-size: 120% 125%;
+      background-position: center;
+
+    }
+
+    &:hover {
+      box-shadow: black 1px 1px 15px;
     }
   }
-}
-.result_text{
-  font-size: 2rem;
-  font-weight: 700;
+
+  .stats {
+    text-align: center;
+    padding: 15px;
+    max-width: 555px;
+    margin: 0 auto;
+    background-color: #CCCCCC;
+
+    #hints {
+      background-color: rgba(11, 88, 162, 0.64);
+      padding: 10px;
+      margin-bottom: 10px;
+      font-weight: 900;
+      letter-spacing: .055em;
+      text-shadow: 1px 1px 5px whitesmoke;
+    }
+
+    .attempts {
+      padding: 0 0 15px;
+      font-weight: 700;
+    }
+
+    button {
+      padding: 5px 10px;
+      font-weight: 700;
+      border: 2px solid grey;
+      display: none;
+      margin: 0 auto;
+    }
+  }
 }
